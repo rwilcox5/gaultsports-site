@@ -1,186 +1,237 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  </head>
+  <body>
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Skeleton: Responsive CSS Boilerplate</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Wrapper -->
+      <div id="wrapper">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+              <!-- Header -->
+                <header id="header">
+                  <a href="https://www.triplelog.com/index.html" class="logo"><strong>TripleLog</strong> Sports and Data</a>
+                  <ul class="icons">
+                    <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
+                          </div>
+                      </li>
+                    <li>
+                      <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="https://www.triplelog.com/ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                    <li>
+                      <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
+                          </div>
+                    </li>
+                    <li>
+                      <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
+                          </div>
+                    </li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/twitter.png" width="25px"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/reddit.png" width="25px"></a></li>
+                  </ul>
+                </header>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
-  <link rel="stylesheet" href="../css/custom.css">
+              <!-- Banner -->
+                <section id="banner">
+                  <div class="row">
+                    <div class="6u">
+                      <header>
+                        <h1>Custom QB Ratings</h1>
+                        <p>You decide who the best quarterback is</p>
+                      </header>
+                      <p>Do you feel like passer ratings are arbitrary?</p>
+                      <p>What if you were the arbiter? Decide which characteristics to weight and find the real elite quarterbacks.</p>
+                      <p>Quarterback statistics from every game in NFL history are loaded in and ready for your analysis. Try to come up with a way to make your favorite quarterback the greatest. Or use boring default ratings to identify the best weeks, seasons, and careers of all-time.</p>
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="../js/site.js"></script>
+                    </div>
+                    <div class="6u">
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+                      <form>
+                      
+                      <div class="row">
+                        <div class="3u">
+                          <label>Completion %</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compWeight" value="10" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compMin" value="30" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compMax" value="77.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Yards</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsWeight" value="50" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsMin" value="3" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsMax" value="12.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Touchdowns</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdWeight" value="40" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdMin" value="0" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdMax" value="11.875" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Interceptions</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intWeight" value="50" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intMin" value="0" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intMax" value="9.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="2u">
+                          <label>Min Atts:</label>
+                        </div>
+                        <div class="1u">
+                          <input id="minAtt" value="1" type="text"></input>
+                        </div>
 
-</head>
-<body class="code-snippets-visible">
+                        <div class="2u">
+                          <label>Num Disp</label>
+                        </div>
+                        <div class="1u">
+                          <input id="nRows" value="10" type="text"></input>
+                        </div>
+                        <div class="5u">
+                          <div class="select-wrapper">
+                            <select id="lengthType">
+                              <option value="1">Game</option>
+                              <option value="2" selected>Season</option>
+                              <option value="3">Postseason</option>
+                              <option value="4">First n weeks</option>
+                              <option value="5">Last n weeks</option>
+                              <option value="6">Any n consecutive weeks</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="1u">
+                          <input id="nweeks" value="1" type="text"></input>
+                        </div>
+                      </div>
+                      </form>
+                      <button class="button-primary" onclick="nflDefault();">NFL</button>
+                      <button class="button-primary" onclick="ncaaDefault();">NCAA</button>
+                      <button class="button-primary" onclick="runRating();">Generate</button>
+                      <table id="myTable">
+                      </table>
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <section class="header">
-      <h2 class="title">Gault Sports Custom NFL Passer Ratings</h2>
-    </section>
+                    </div>
 
-    <div class="navbar-spacer"></div>
-    
-    <div class="navbar">
-      <div class="dropdown">
-        <a class="dropbtn" href="../about.html"><button class="dropbtn">ABOUT</button>
-        </a>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="nflDropdown">
-          <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
-          <a href="../nfl/game-breakdowns.html">Game Breakdowns</a>
-          <a href="../nfl/nfl-parlays.html">Parlays</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="ncaafDropdown">
-          <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
-          <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="mlbDropdown">
-          <a href="../mlb/epfip.html">epFIP</a>
-          <a href="../mlb/pitch-charts.html">Pitch Charts</a>
-          <a href="../mlb/war-by-age.html">WAR by Age</a>
-          <a href="../mlb/pie-charts.html">Pie Charts</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="olympicDropdown">
-          <a href="../olympics/map.html">Olympic Map</a>
-        </div>
-      </div> 
-    </div>
-
-    <form>
-    <div class="row">
-      <div class="two columns">
-        <label for="exampleEmailInput">Min Atts</label>
-        <input class="u-full-width" id="minAtt" value="1"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">Comp Weight</label>
-        <input class="u-full-width" id="compWeight" value="10"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">Yards Weight</label>
-        <input class="u-full-width" id="yardsWeight" value="50"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">TD Weight</label>
-        <input class="u-full-width" id="tdWeight" value="40"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">INT Weight</label>
-        <input class="u-full-width" id="intWeight" value="50"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">Num Disp</label>
-        <input class="u-full-width" id="nRows" value="10"></input>
-      </div>
-    </div>
-    <div class="row">
-      <div class="one column">
-        <input class="u-full-width" id="compMin" value="30"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">&lt; Comp % &lt;</label>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="compMax" value="77.5"></input>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="intMin" value="0"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">&lt; INT % &lt;</label>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="intMax" value="9.5"></input>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="yardsMin" value="3"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">&lt; Yards PA &lt;</label>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="yardsMax" value="12.5"></input>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="one column">
-        <input class="u-full-width" id="tdMin" value="0"></input>
-      </div>
-      <div class="two columns">
-        <label for="exampleEmailInput">&lt; TD % &lt;</label>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="tdMax" value="11.875"></input>
-      </div>
-      <div class="seven columns">
-        <select class="u-full-width" id="lengthType">
-          <option value="1">Game</option>
-          <option value="2" selected>Season</option>
-          <option value="3">Postseason</option>
-          <option value="4">First n weeks</option>
-          <option value="5">Last n weeks</option>
-          <option value="6">Any n consecutive weeks</option>
-        </select>
-      </div>
-      <div class="one column">
-        <input class="u-full-width" id="nweeks" value="1"></input>
-      </div>
-    </div>
-    </form>
-    <button class="button-primary" onclick="nflDefault();">NFL</button>
-    <button class="button-primary" onclick="ncaaDefault();">NCAA</button>
-    <button class="button-primary" onclick="runRating();">Generate</button>
-    <table id="myTable">
-    </table>
-  </div>
-
-    <script src="custom-QB-rating.js"></script>
-    <script src="custom-QB-rating-asm.js"></script>
+                  </div>
+                </section>
 
 
-</body>
+              
+
+            </div>
+          </div>
+
+        
+
+      </div>
+
+    <!-- Scripts -->
+
+      <script src="https://www.triplelog.com/assets/js/main.js"></script>
+      <script src="https://www.triplelog.com/nfl/custom-QB-rating.js"></script>
+      <script src="https://www.triplelog.com/nfl/custom-QB-rating-asm.js"></script>
+
+
+  </body>
 </html>

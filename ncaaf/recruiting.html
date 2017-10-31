@@ -1,135 +1,116 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  </head>
+  <body onload="getPoll(25);">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Skeleton: Responsive CSS Boilerplate</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Wrapper -->
+      <div id="wrapper">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+              <!-- Header -->
+                <header id="header">
+                  <a href="https://www.triplelog.com/index.html" class="logo"><strong>TripleLog</strong> Sports and Data</a>
+                  <ul class="icons">
+                    <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
+                          </div>
+                      </li>
+                    <li>
+                      <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="https://www.triplelog.com/ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                    <li>
+                      <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
+                          </div>
+                    </li>
+                    <li>
+                      <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
+                          </div>
+                    </li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/twitter.png" width="25px"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/reddit.png" width="25px"></a></li>
+                  </ul>
+                </header>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
-  <link rel="stylesheet" href="../css/custom.css">
+              <!-- Banner -->
+                <section id="banner">
+                  <div class="content">
+                    <header>
+                      <h1>Recruiting Rankings</h1>
+                      <p>Unbiased College Football Team Recruiting Rankings</p>
+                    </header>
+                    <p>Do you feel like recruiting rankings are biased?</p>
+                    <p>What if there was a source of unbiased ratings for high school prospects? Coaches judge players and if they do a poor job they get fired.</p>
+                    <p>TripleLog rankings use data on scholarship offers to identify the best recruiting programs. At its simplest, teams that win recruiting battles over top programs gain points and programs that lose battles also lose points.</p>
+                    <p>Our rankings are based on ELO ratings, but adjusted slightly to account for the fact that the information is not complete. As usual, each team starts with a rating of 1500. Every commitment is considered a victory for the chosen program and a defeat for every other school that made an offer.</p>
+                    <p>Beating an FCS school is not the same as beating an SEC school, so we want to more heavily reward good victories. Each pair of winner and loser is treated like a separate competition. An expected probabilty is computed and used to determine how many points the winning team gains and the losing team loses. The probability that the losing team could have won is multiplied by a fixed amount to determine the change.</p>
+                    <p>If Alabama is competing with South Alabama then there may only be a 1% chance of South Alabama getting the recruit. So if Alabama we would only add 1% of some constant. However, if South Alabama wins the recruit then we would add 99% of that constant. Thus good teams beating bad teams doesn't change much, but a big upset really change the ratings.</p>
+                    <p>While offer data is quite robust, some schools do not offer scholarships unless they really think they have a chance for a prospect. The top recruits could go to any school they choose, but not every school actually makes a formal offer that gets recorded. We don't want to reward programs for refusing to offer scholarships to players that are out of their league. So we add a small amount back for each loss. Thus the penalty for each loss is some sort of loss below replacement. Programs that offer everyone are not penalized simply for dreaming big, but they are still penalized for losing battles.</p>
 
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+                  </div>
+                  <span class="image object">
 
-  <script src="../js/site.js"></script>
+                        <table class="u-full-width" id="myTable">
+                        <thead>
+                            <tr>
+                              <th>School</th>
+                              <th>Conference</th>
+                              <th>Commits</th>
+                              <th>Rating</th>
+                            </tr>
+                          </thead>
+                        </table>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+                  </span>
+                </section>
 
-</head>
-<body class="code-snippets-visible" onload="getPoll(10);">
+              
 
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <section class="header">
-      <h2 class="title">Gault Sports NCAA Football Recruiting</h2>
-    </section>
+            </div>
+          </div>
 
-    <div class="navbar-spacer"></div>
-    
-    <div class="navbar">
-      <div class="dropdown">
-        <a class="dropbtn" href="../about.html"><button class="dropbtn">ABOUT</button>
-        </a>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="nflDropdown">
-          <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
-          <a href="../nfl/game-breakdowns.html">Game Breakdowns</a>
-          <a href="../nfl/nfl-parlays.html">Parlays</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="ncaafDropdown">
-          <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
-          <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="mlbDropdown">
-          <a href="../mlb/epfip.html">epFIP</a>
-          <a href="../mlb/pitch-charts.html">Pitch Charts</a>
-          <a href="../mlb/war-by-age.html">WAR by Age</a>
-          <a href="../mlb/pie-charts.html">Pie Charts</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="olympicDropdown">
-          <a href="../olympics/map.html">Olympic Map</a>
-        </div>
-      </div> 
-    </div>
+        
 
-
-    <!-- Tables -->
-    <div class="docs-section" id="tables">
-      <h6 class="docs-header">Who is winning the Recruiting War?</h6>
-      <div class="docs-example">
-        <table class="u-full-width" id="myTable">
-        <thead>
-            <tr>
-              <th>School</th>
-              <th>Conference</th>
-              <th>Commits</th>
-              <th>Rating</th>
-            </tr>
-          </thead>
-        </table>
       </div>
 
-    </div>
- 
-  </div>
+    <!-- Scripts -->
 
-    <script src="recruiting.js"></script>
-
-  <!-- Google Analytics -->
-  <script type="text/javascript">
-
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', '']);
-    _gaq.push(['_trackPageview']);
-
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-
-  </script>
-  <!-- <div>Icons made by <a href="https://www.flaticon.com/authors/picol" title="Picol">Picol</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-  <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
+      <script src="https://www.triplelog.com/assets/js/main.js"></script>
+      <script src="https://www.triplelog.com/ncaaf/recruiting.js"></script>
 
 
-</body>
+  </body>
 </html>

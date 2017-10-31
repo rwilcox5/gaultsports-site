@@ -1,124 +1,117 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  </head>
+  <body onload="getPoll();">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Skeleton: Responsive CSS Boilerplate</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Wrapper -->
+      <div id="wrapper">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../css/normalize.css">
-  <link rel="stylesheet" href="../css/skeleton.css">
-  <link rel="stylesheet" href="../css/custom.css">
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <script src="../js/site.js"></script>
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body class="code-snippets-visible" onload="getPoll();">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <section class="header">
-      <h2 class="title">Gault Sports NCAA Football Weighted AP Poll</h2>
-    </section>
-
-    <div class="navbar-spacer"></div>
-    
-    <div class="navbar">
-      <div class="dropdown">
-        <a class="dropbtn" href="../about.html"><button class="dropbtn">ABOUT</button>
-        </a>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="nflDropdown">
-          <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
-          <a href="../nfl/game-breakdowns.html">Game Breakdowns</a>
-          <a href="../nfl/nfl-parlays.html">Parlays</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="ncaafDropdown">
-          <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
-          <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="mlbDropdown">
-          <a href="../mlb/epfip.html">epFIP</a>
-          <a href="../mlb/pitch-charts.html">Pitch Charts</a>
-          <a href="../mlb/war-by-age.html">WAR by Age</a>
-          <a href="../mlb/pie-charts.html">Pie Charts</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="olympicDropdown">
-          <a href="../olympics/map.html">Olympic Map</a>
-        </div>
-      </div> 
-    </div>
+              <!-- Header -->
+                <header id="header">
+                  <a href="https://www.triplelog.com/index.html" class="logo"><strong>TripleLog</strong> Sports and Data</a>
+                  <ul class="icons">
+                    <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
+                          </div>
+                      </li>
+                    <li>
+                      <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="https://www.triplelog.com/ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                    <li>
+                      <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
+                          </div>
+                    </li>
+                    <li>
+                      <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
+                          </div>
+                    </li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/twitter.png" width="25px"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/reddit.png" width="25px"></a></li>
+                  </ul>
+                </header>
 
 
-    <!-- Tables -->
-    <div class="docs-section" id="tables">
-      <h6 class="docs-header">Who is the best team in College Football?</h6>
-      <div class="docs-example">
-        <table class="u-full-width" id="myTable">
-        <thead>
-            <tr>
-              <th>Rank</th>
-              <th>School</th>
-              <th>Conference</th>
-              <th>Points</th>
-              <th>Last Week</th>
-              <th>Season</th>
-              <th>AP Rank</th>
-            </tr>
-          </thead>
-        </table>
+              <!-- Banner -->
+                <section id="banner">
+                  <div class="content">
+                    <header>
+                      <h1>Weighted AP Poll</h1>
+                      <p>Because not all voters are made equal</p>
+                    </header>
+                    <p>Do you feel like voters rank some teams too high or low every week?</p>
+                    <p>What if there was a way to adjust for the natural biases of voters to create a more accurate ranking? The TripleLog poll uses the same AP voters, but if a voter consistently misranks a particular team or conference then their vote does not count as heavily.</p>
+                    <p>The best pollsters should have the most say, so we track every game to see who is the best overall, for each conference, and for each team. Biases are adjusted and bad voters are largely ignored.</p>
+
+                  </div>
+                  <span class="image object">
+
+                        <table class="u-full-width" id="myTable">
+                        <thead>
+                            <tr>
+                              <th>Rank</th>
+                              <th>School</th>
+                              <th>Conference</th>
+                              <th>Points</th>
+                              <th>Last Week</th>
+                              <th>Season</th>
+                              <th>AP Rank</th>
+                            </tr>
+                          </thead>
+                        </table>
+
+                  </span>
+                </section>
+
+              
+
+            </div>
+          </div>
+
+        
+
       </div>
 
-    </div>
- 
-  </div>
+    <!-- Scripts -->
 
-    <script src="ap-poll.js"></script>
-    <script src="../charts/sparkline.js"></script>
-
+      <script src="https://www.triplelog.com/assets/js/main.js"></script>
+      <script src="https://www.triplelog.com/charts/sparkline.js"></script>
+      <script src="https://www.triplelog.com/ncaaf/ap-poll.js"></script>
 
 
-
-</body>
+  </body>
 </html>
