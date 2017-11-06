@@ -1,436 +1,423 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
+    <link rel="icon" href="https://www.triplelog.com/assets/img/logo.png">
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
+  </head>
+  <body onload="map_main({'base1':255,'base2':255,'base3':255,'max1':0,'max2':0,'max3':0});">
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Skeleton: Responsive CSS Boilerplate</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <!-- Wrapper -->
+      <div id="wrapper">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id="inner-div">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+              <!-- Header -->
+                <header id="header">
+                  <a href="https://www.triplelog.com/index.html" class="logo"><img src="https://www.triplelog.com/assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                  <ul class="icons">
+                    <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                          </div>
+                      </li>
+                    <li>
+                      <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="https://www.triplelog.com/ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                    <li>
+                      <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
+                          </div>
+                    </li>
+                    <li>
+                      <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
+                          </div>
+                    </li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/twitter.png" width="25px"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/reddit.png" width="25px"></a></li>
+                  </ul>
+                </header>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="../../css/normalize.css">
-  <link rel="stylesheet" href="../../css/skeleton.css">
-  <link rel="stylesheet" href="../../css/custom.css">
-  <style type="text/css">
-      canvas { border: 1px solid black; }
-    </style>
-
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-
-  <script src="../../js/site.js"></script>
-  <script type="text/javascript" src="../../maps/WorldMapConfig.js"> </script>
-  <script type="text/javascript" src="../../maps/world_map.js">   </script>
-
-    
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body class="code-snippets-visible" onload="map_main({'base1':255,'base2':255,'base3':255,'max1':0,'max2':0,'max3':0});">
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <section class="header">
-      <h2 class="title">Gault Sports Olympic Ratings</h2>
-    </section>
-
-    <div class="navbar-spacer"></div>
-    
-    <div class="navbar">
-      <div class="dropdown">
-        <a class="dropbtn" href="../about.html"><button class="dropbtn">ABOUT</button>
-        </a>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="nflDropdown">
-          <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
-          <a href="../nfl/game-breakdowns.html">Game Breakdowns</a>
-          <a href="../nfl/nfl-parlays.html">Parlays</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="ncaafDropdown">
-          <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
-          <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="mlbDropdown">
-          <a href="../mlb/epfip.html">epFIP</a>
-          <a href="../mlb/pitch-charts.html">Pitch Charts</a>
-          <a href="../mlb/war-by-age.html">WAR by Age</a>
-          <a href="../mlb/pie-charts.html">Pie Charts</a>
-        </div>
-      </div> 
-      <div class="dropdown">
-        <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content" id="olympicDropdown">
-          <a href="../olympics/map.html">Olympic Map</a>
-        </div>
-      </div> 
-    </div>
-
-    
+    <div class="row">
+    <div class="12u">
         <form>
     <div class="row">
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editAquatics','editAquatics');" href="#">Aquatics</a></label>
-        <input class="u-full-width" id="wAquatics" value="15"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editAquatics','editAquatics');" href="#">Aquatics</a></label>
+        <input id="wAquatics" value="15" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editAthletics','editAthletics');" href="#">Athletics</a></label>
-        <input class="u-full-width" id="wAthletics" value="20"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editAthletics','editAthletics');" href="#">Athletics</a></label>
+        <input id="wAthletics" value="20" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editTeam','editTeam');" href="#">Team Sports</a></label>
-        <input class="u-full-width" id="wTeam" value="15"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editTeam','editTeam');" href="#">Team Sports</a></label>
+        <input id="wTeam" value="15" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editCombat','editCombat');" href="#">Combat</a></label>
-        <input class="u-full-width" id="wCombat" value="10"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editCombat','editCombat');" href="#">Combat</a></label>
+        <input id="wCombat" value="10" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editWeapons','editWeapons');" href="#">Weapons</a></label>
-        <input class="u-full-width" id="wWeapons" value="5"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editWeapons','editWeapons');" href="#">Weapons</a></label>
+        <input id="wWeapons" value="5" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"></label>
+      <div class="2u">
+        <label></label>
       </div>
     </div>
     <div class="row">
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editGym','editGym');" href="#">Gymnastics</a></label>
-        <input class="u-full-width" id="wGym" value="10"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editGym','editGym');" href="#">Gymnastics</a></label>
+        <input id="wGym" value="10" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editWater','editWater');" href="#">Watercraft</a></label>
-        <input class="u-full-width" id="wWater" value="10"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editWater','editWater');" href="#">Watercraft</a></label>
+        <input id="wWater" value="10" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editRiding','editRiding');" href="#">Riding</a></label>
-        <input class="u-full-width" id="wRiding" value="5"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editRiding','editRiding');" href="#">Riding</a></label>
+        <input id="wRiding" value="5" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editRaquet','editRaquet');" href="#">Raquet Sports</a></label>
-        <input class="u-full-width" id="wRaquet" value="5"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editRaquet','editRaquet');" href="#">Raquet Sports</a></label>
+        <input id="wRaquet" value="5" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"><a class="button-primary" onclick="editField('editMultiple','editMultiple');" href="#">Multiple</a></label>
-        <input class="u-full-width" id="wMultiple" value="5"></input>
+      <div class="2u">
+        <label><a class="button-primary" onclick="editField('editMultiple','editMultiple');" href="#">Multiple</a></label>
+        <input id="wMultiple" value="5" type="text"></input>
       </div>
-      <div class="two columns">
-        <label for="exampleEmailInput"></label>
+      <div class="2u">
+        <label></label>
       </div>
     </div>
     <div class="row hiddenSport" id="editAquatics">
-<div class="two columns">
-<label for="exampleEmailInput"><a class="button-primary" onclick="editField('editSwimming','editAquatics');" href="#">Swimming</a></label>
-<input class="u-full-width" id="wSwimming" value="50"></input>
+<div class="2u">
+<label><a class="button-primary" onclick="editField('editSwimming','editAquatics');" href="#">Swimming</a></label>
+<input id="wSwimming" value="50" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Diving</label>
-<input class="u-full-width" id="wDiving" value="16"></input>
+<div class="2u">
+<label>Diving</label>
+<input id="wDiving" value="16" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">10 KM Swim</label>
-<input class="u-full-width" id="wMarathonSwim" value="16"></input>
+<div class="2u">
+<label>10 KM Swim</label>
+<input id="wMarathonSwim" value="16" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Water Polo</label>
-<input class="u-full-width" id="wPolo" value="17"></input>
+<div class="2u">
+<label>Water Polo</label>
+<input id="wPolo" value="17" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editAthletics">
-<div class="two columns">
-<label for="exampleEmailInput"><a class="button-primary" onclick="editField('editSprints','editAthletics');" href="#">Sprints</a></label>
-<input class="u-full-width" id="wSprints" value="30"></input>
+<div class="2u">
+<label><a class="button-primary" onclick="editField('editSprints','editAthletics');" href="#">Sprints</a></label>
+<input id="wSprints" value="30" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Distance</label>
-<input class="u-full-width" id="wDistance" value="15"></input>
+<div class="2u">
+<label>Distance</label>
+<input id="wDistance" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput"><a class="button-primary" onclick="editField('editField','editAthletics');" href="#">Field</a></label>
-<input class="u-full-width" id="wField" value="15"></input>
+<div class="2u">
+<label><a class="button-primary" onclick="editField('editField','editAthletics');" href="#">Field</a></label>
+<input id="wField" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Weight Lifting</label>
-<input class="u-full-width" id="wLifting" value="20"></input>
+<div class="2u">
+<label>Weight Lifting</label>
+<input id="wLifting" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Jumps</label>
-<input class="u-full-width" id="wJumps" value="15"></input>
+<div class="2u">
+<label>Jumps</label>
+<input id="wJumps" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Walking</label>
-<input class="u-full-width" id="wWalking" value="5"></input>
+<div class="2u">
+<label>Walking</label>
+<input id="wWalking" value="5" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editTeam">
-<div class="two columns">
-<label for="exampleEmailInput">Basketball</label>
-<input class="u-full-width" id="wBasket" value="25"></input>
+<div class="2u">
+<label>Basketball</label>
+<input id="wBasket" value="25" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Football</label>
-<input class="u-full-width" id="wFoot" value="25"></input>
+<div class="2u">
+<label>Football</label>
+<input id="wFoot" value="25" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Handball</label>
-<input class="u-full-width" id="wHand" value="15"></input>
+<div class="2u">
+<label>Handball</label>
+<input id="wHand" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Hockey</label>
-<input class="u-full-width" id="wHockey" value="15"></input>
+<div class="2u">
+<label>Hockey</label>
+<input id="wHockey" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Volleyball</label>
-<input class="u-full-width" id="wVolley" value="10"></input>
+<div class="2u">
+<label>Volleyball</label>
+<input id="wVolley" value="10" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Beach Volleyball</label>
-<input class="u-full-width" id="wBeach" value="10"></input>
+<div class="2u">
+<label>Beach Volleyball</label>
+<input id="wBeach" value="10" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editCombat">
-<div class="two columns">
-<label for="exampleEmailInput">Judo</label>
-<input class="u-full-width" id="wJudo" value="20"></input>
+<div class="2u">
+<label>Judo</label>
+<input id="wJudo" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Taekwondo</label>
-<input class="u-full-width" id="wTaekwondo" value="20"></input>
+<div class="2u">
+<label>Taekwondo</label>
+<input id="wTaekwondo" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Fencing</label>
-<input class="u-full-width" id="wFencing" value="20"></input>
+<div class="2u">
+<label>Fencing</label>
+<input id="wFencing" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Wrestling</label>
-<input class="u-full-width" id="wWrestling" value="20"></input>
+<div class="2u">
+<label>Wrestling</label>
+<input id="wWrestling" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Boxing</label>
-<input class="u-full-width" id="wBoxing" value="20"></input>
+<div class="2u">
+<label>Boxing</label>
+<input id="wBoxing" value="20" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editWeapons">
-<div class="two columns">
-<label for="exampleEmailInput">Archery</label>
-<input class="u-full-width" id="wArchery" value="35"></input>
+<div class="2u">
+<label>Archery</label>
+<input id="wArchery" value="35" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Pistol</label>
-<input class="u-full-width" id="wPistol" value="20"></input>
+<div class="2u">
+<label>Pistol</label>
+<input id="wPistol" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Rifle</label>
-<input class="u-full-width" id="wRifle" value="20"></input>
+<div class="2u">
+<label>Rifle</label>
+<input id="wRifle" value="20" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Skeet</label>
-<input class="u-full-width" id="wSkeet" value="10"></input>
+<div class="2u">
+<label>Skeet</label>
+<input id="wSkeet" value="10" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Trap</label>
-<input class="u-full-width" id="wTrap" value="15"></input>
+<div class="2u">
+<label>Trap</label>
+<input id="wTrap" value="15" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editRaquet">
-<div class="two columns">
-<label for="exampleEmailInput">Tennis</label>
-<input class="u-full-width" id="wTennis" value="40"></input>
+<div class="2u">
+<label>Tennis</label>
+<input id="wTennis" value="40" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Badminton</label>
-<input class="u-full-width" id="wBad" value="30"></input>
+<div class="2u">
+<label>Badminton</label>
+<input id="wBad" value="30" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Table Tennis</label>
-<input class="u-full-width" id="wTT" value="30"></input>
+<div class="2u">
+<label>Table Tennis</label>
+<input id="wTT" value="30" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editRiding">
-<div class="two columns">
-<label for="exampleEmailInput"><a class="button-primary" onclick="editField('editCycling','editRiding');" href="#">Cycling</a></label>
-<input class="u-full-width" id="wCycling" value="50"></input>
+<div class="2u">
+<label><a class="button-primary" onclick="editField('editCycling','editRiding');" href="#">Cycling</a></label>
+<input id="wCycling" value="50" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Equestrian</label>
-<input class="u-full-width" id="wEquestrian" value="50"></input>
+<div class="2u">
+<label>Equestrian</label>
+<input id="wEquestrian" value="50" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editGym">
-<div class="two columns">
-<label for="exampleEmailInput">Events</label>
-<input class="u-full-width" id="wEvents" value="30"></input>
+<div class="2u">
+<label>Events</label>
+<input id="wEvents" value="30" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Team</label>
-<input class="u-full-width" id="wTeamGym" value="36"></input>
+<div class="2u">
+<label>Team</label>
+<input id="wTeamGym" value="36" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">All-Around</label>
-<input class="u-full-width" id="wAround" value="24"></input>
+<div class="2u">
+<label>All-Around</label>
+<input id="wAround" value="24" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Trampoline</label>
-<input class="u-full-width" id="wTramp" value="10"></input>
+<div class="2u">
+<label>Trampoline</label>
+<input id="wTramp" value="10" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editMultiple">
-<div class="two columns">
-<label for="exampleEmailInput">Modern Pentathlon</label>
-<input class="u-full-width" id="wPentathlon" value="60"></input>
+<div class="2u">
+<label>Modern Pentathlon</label>
+<input id="wPentathlon" value="60" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Triathlon</label>
-<input class="u-full-width" id="wTriathlon" value="40"></input>
+<div class="2u">
+<label>Triathlon</label>
+<input id="wTriathlon" value="40" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editWater">
-<div class="two columns">
-<label for="exampleEmailInput">Canoe Slalom</label>
-<input class="u-full-width" id="wCanoeSlalom" value="17"></input>
+<div class="2u">
+<label>Canoe Slalom</label>
+<input id="wCanoeSlalom" value="17" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Canoe Sprint</label>
-<input class="u-full-width" id="wCanoeSprint" value="17"></input>
+<div class="2u">
+<label>Canoe Sprint</label>
+<input id="wCanoeSprint" value="17" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Rowing</label>
-<input class="u-full-width" id="wRowing" value="33"></input>
+<div class="2u">
+<label>Rowing</label>
+<input id="wRowing" value="33" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Sailing</label>
-<input class="u-full-width" id="wSailing" value="33"></input>
+<div class="2u">
+<label>Sailing</label>
+<input id="wSailing" value="33" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editSwimming">
-<div class="two columns">
-<label for="exampleEmailInput">Backstroke</label>
-<input class="u-full-width" id="wBack" value="15"></input>
+<div class="2u">
+<label>Backstroke</label>
+<input id="wBack" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Breaststroke</label>
-<input class="u-full-width" id="wBreast" value="15"></input>
+<div class="2u">
+<label>Breaststroke</label>
+<input id="wBreast" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Butterfly</label>
-<input class="u-full-width" id="wButter" value="15"></input>
+<div class="2u">
+<label>Butterfly</label>
+<input id="wButter" value="15" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Freestyle</label>
-<input class="u-full-width" id="wFree" value="35"></input>
+<div class="2u">
+<label>Freestyle</label>
+<input id="wFree" value="35" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Medley</label>
-<input class="u-full-width" id="wMedley" value="20"></input>
+<div class="2u">
+<label>Medley</label>
+<input id="wMedley" value="20" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editSprints">
-<div class="two columns">
-<label for="exampleEmailInput">Sprints</label>
-<input class="u-full-width" id="wRuns" value="40"></input>
+<div class="2u">
+<label>Sprints</label>
+<input id="wRuns" value="40" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Hurdles</label>
-<input class="u-full-width" id="wHurdles" value="26"></input>
+<div class="2u">
+<label>Hurdles</label>
+<input id="wHurdles" value="26" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Relays</label>
-<input class="u-full-width" id="wRelays" value="34"></input>
+<div class="2u">
+<label>Relays</label>
+<input id="wRelays" value="34" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editField">
-<div class="two columns">
-<label for="exampleEmailInput">Decathlon</label>
-<input class="u-full-width" id="wDecathlon" value="40"></input>
+<div class="2u">
+<label>Decathlon</label>
+<input id="wDecathlon" value="40" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Shot Put</label>
-<input class="u-full-width" id="wShot" value="12"></input>
+<div class="2u">
+<label>Shot Put</label>
+<input id="wShot" value="12" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Hammer Throw</label>
-<input class="u-full-width" id="wHammer" value="12"></input>
+<div class="2u">
+<label>Hammer Throw</label>
+<input id="wHammer" value="12" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Discus Throw</label>
-<input class="u-full-width" id="wDiscus" value="12"></input>
+<div class="2u">
+<label>Discus Throw</label>
+<input id="wDiscus" value="12" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Javelin</label>
-<input class="u-full-width" id="wJavelin" value="12"></input>
+<div class="2u">
+<label>Javelin</label>
+<input id="wJavelin" value="12" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Pole Vault</label>
-<input class="u-full-width" id="wPole" value="12"></input>
+<div class="2u">
+<label>Pole Vault</label>
+<input id="wPole" value="12" type="text"></input>
 </div>
 </div>
 <div class="row hiddenSport" id="editCycling">
-<div class="two columns">
-<label for="exampleEmailInput">Track</label>
-<input class="u-full-width" id="wTrack" value="34"></input>
+<div class="2u">
+<label>Track</label>
+<input id="wTrack" value="34" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Road</label>
-<input class="u-full-width" id="wRoad" value="22"></input>
+<div class="2u">
+<label>Road</label>
+<input id="wRoad" value="22" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">BMX</label>
-<input class="u-full-width" id="wBmx" value="22"></input>
+<div class="2u">
+<label>BMX</label>
+<input id="wBmx" value="22" type="text"></input>
 </div>
-<div class="two columns">
-<label for="exampleEmailInput">Mountain Bike</label>
-<input class="u-full-width" id="wMountain" value="22"></input>
+<div class="2u">
+<label>Mountain Bike</label>
+<input id="wMountain" value="22" type="text"></input>
 </div>
 </div>
 
     </form>
+    </div>
+    </div>
+    <div class="row">
+    <div class="12u">
     <button class="button-primary" onclick="myDefault();">Default</button>
     <button class="button-primary" onclick="runRating();">Generate</button>
-    <table id="myTable">
-    </table>
-  </div>
-  </div>
+    </div>
+    </div>
 
-    <div style="margin-left:50px;">
+    <div class="row">
+    <div class="12u" id="canvas-div">
     <canvas id="map_canvas" width="1920" height="700" style="position:relative;">
     </canvas>
     </div>
+    </div>
 
-    <script src="oly_compute.js"></script>
-    <script src="oly_compute_asm.js"></script>
-    <script type="text/javascript">document.getElementById('map_canvas').width=window.innerWidth-100;document.getElementById('map_canvas').height=(window.innerWidth-100.)/1820.*700.;</script>
+            </div>
+          </div>
+      </div>
+
+    <!-- Scripts -->
+
+      <script src="https://www.triplelog.com/assets/js/main.js"></script>
+      <script src="https://www.triplelog.com/maps/world_map.js"></script>
+      <script src="https://www.triplelog.com/maps/WorldMapConfig.js"></script>
+      <script src="https://www.triplelog.com/olympics/oly_compute.js"></script>
+      <script src="https://www.triplelog.com/olympics/oly_compute_asm.js"></script>
+      <script type="text/javascript">
+      console.log('hh');
+      document.getElementById('map_canvas').width=document.getElementById('canvas-div').offsetWidth-10.;
+      document.getElementById('map_canvas').height=(document.getElementById('canvas-div').offsetWidth-10.)/1820.*730.;
+      console.log(document.getElementById('canvas-div').offsetWidth);
+      console.log('hh');
+      </script>
 
 
-</body>
+  </body>
 </html>

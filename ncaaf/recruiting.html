@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
 
   </head>
-  <body onload="getPoll(25);">
+  <body onload="getRecs(25);">
 
     <!-- Wrapper -->
       <div id="wrapper">
@@ -83,9 +83,10 @@
                   </div>
                   <span class="image object">
 
-                        <table class="u-full-width" id="myTable">
+                        <table class="u-full-width" id="recTable">
                         <thead>
                             <tr>
+                              <th>Rank</th>
                               <th>School</th>
                               <th>Conference</th>
                               <th>Commits</th>
@@ -93,6 +94,8 @@
                             </tr>
                           </thead>
                         </table>
+                        <a href="#" class="button big" onclick="markdownRecs(25);">Generate Markdown</a>
+                        <div id="markdown_spot"></div>
 
                   </span>
                 </section>

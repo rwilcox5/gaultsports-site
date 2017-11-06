@@ -21,16 +21,20 @@ function runRating(){
       maxTd = document.getElementById('tdMax').value*100;
       lengthType = document.getElementById('lengthType').value;
       nweeks = document.getElementById('nweeks').value;
+      nrows = Math.min(document.getElementById('nRows').value,1000);
       _makeTable(compr,yardr,tdr,intr,nrows,minAtt,minComp,maxComp,minYards,maxYards,minInt,maxInt,minTd,maxTd,lengthType,nweeks);
       retdouble = _sendTen(5,0);
-      var table = document.getElementById("myTable");
-      table.innerHTML = "<thead><tr><th>Name</th><th>Att.</th><th>Comp.</th><th>Yards</th><th>TD</th><th>INT</th><th>Rating</th><th>Year</th></tr></thead>";
+      var table = document.getElementById("qbTable");
+      table.innerHTML = "<thead><tr><th>Rank</th><th>Name</th><th>Att.</th><th>Comp.</th><th>Yards</th><th>TD</th><th>INT</th><th>Rating</th><th>Year</th></tr></thead>";
       var ii = 0;
-      for (i=0;i<10;i++){
+      for (i=0;i<nrows;i++){
         table.insertRow(i+1); 
-        table.rows[i+1].insertCell(0); table.rows[i+1].cells[0].innerHTML = getQBname(_sendTen(7,i,lengthType));
-        for (ii=0;ii<6;ii++){table.rows[i+1].insertCell(ii+1); table.rows[i+1].cells[ii+1].innerHTML = _sendTen(ii,i,lengthType);}
-        table.rows[i+1].insertCell(6); table.rows[i+1].cells[6].innerHTML = (_sendTen(6,i,lengthType)*1./100).toFixed(1);
+        if (i%2==0){table.rows[i+1].style.background = "#DDDDDD";}
+        else {table.rows[i+1].style.background = "#FFFFFF";}
+        table.rows[i+1].insertCell(0); table.rows[i+1].cells[0].innerHTML = i+1;
+        table.rows[i+1].insertCell(1); table.rows[i+1].cells[1].innerHTML = getQBname(_sendTen(7,i,lengthType));
+        for (ii=0;ii<6;ii++){table.rows[i+1].insertCell(ii+2); table.rows[i+1].cells[ii+2].innerHTML = _sendTen(ii,i,lengthType);}
+        table.rows[i+1].insertCell(7); table.rows[i+1].cells[7].innerHTML = (_sendTen(6,i,lengthType)*1./100).toFixed(1);
 
       }
 

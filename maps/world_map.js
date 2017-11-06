@@ -60,10 +60,10 @@ function map_main(stateColors)
 
    g_map_canvas.addEventListener('mousemove', map_mousemove, false);
    g_map_canvas.addEventListener('mousedown', map_mousedown, false);
-
-   myRankBoxOrigin = [20,320];
-  myRankBoxWidth  = 360;
-  myRankBoxHeight = 365;
+   var canvas_mult = (document.getElementById('canvas-div').offsetWidth-10.)*1./1820.;
+   myRankBoxOrigin = [20*canvas_mult,-25+370*canvas_mult];
+  myRankBoxWidth  = 360*canvas_mult;
+  myRankBoxHeight = 360*canvas_mult;
 
   myUseRankBox = true;
   myRankBoxFillRGB   = [255,255,255];
@@ -73,7 +73,9 @@ function map_main(stateColors)
 
   myRankBoxTextHeight = 12;
   myRankBoxText = new Array();
-  for (i=1;i<31;i++){
+  var nrankstr = 'Rk'+'    '+'Pts.'+'      '+'G'+'        '+'S'+'        '+'B'+'      '+ 'Country';
+  addRankBoxText(nrankstr);
+  for (i=1;i<26;i++){
     for ( var abbrev in g_map_stateMap )
     {
           if (abbrev in stateColors){
@@ -381,8 +383,9 @@ function map_State(abbrev, capsName, prettyName)
    this.myUseFill = true;
 
    this.myClickCallback = null;
+   var canvas_mult = (document.getElementById('canvas-div').offsetWidth-10.)*1./1820.;
 
-   this.myInfoBoxOrigin = [1200,500];
+   this.myInfoBoxOrigin = [1125*canvas_mult,450*canvas_mult];
    this.myInfoBoxWidth  = 174;
    this.myInfoBoxHeight = 160;
 
@@ -2015,12 +2018,12 @@ for(i=0;i<theStateArray[iii].myPolygons[ii].myXVals.length;i++){theStateArray[ii
 }
 for(iii=0;iii<175;iii++){
 for(ii=0;ii<theStateArray[iii].myPolygons.length;ii++){
-for(i=0;i<theStateArray[iii].myPolygons[ii].myYVals.length;i++){theStateArray[iii].myPolygons[ii].myYVals[i]*=(window.innerWidth-100.)*1./1820.;}
+for(i=0;i<theStateArray[iii].myPolygons[ii].myYVals.length;i++){theStateArray[iii].myPolygons[ii].myYVals[i]*=(document.getElementById('canvas-div').offsetWidth-10.)*1./1820.;}
 }
 }
 for(iii=0;iii<175;iii++){
 for(ii=0;ii<theStateArray[iii].myPolygons.length;ii++){
-for(i=0;i<theStateArray[iii].myPolygons[ii].myXVals.length;i++){theStateArray[iii].myPolygons[ii].myXVals[i]*=(window.innerWidth-100.)*1./1820.;}
+for(i=0;i<theStateArray[iii].myPolygons[ii].myXVals.length;i++){theStateArray[iii].myPolygons[ii].myXVals[i]*=(document.getElementById('canvas-div').offsetWidth-10.)*1./1820.;}
 }
 }
 }

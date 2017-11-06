@@ -1,0 +1,239 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
+
+  </head>
+  <body>
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner">
+
+              <!-- Header -->
+                <header id="header">
+                  <a href="https://www.triplelog.com/index.html" class="logo"><strong>TripleLog</strong> Sports and Data</a>
+                  <ul class="icons">
+                    <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
+                          </div>
+                      </li>
+                    <li>
+                      <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="https://www.triplelog.com/ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                    <li>
+                      <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
+                          </div>
+                    </li>
+                    <li>
+                      <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
+                          </div>
+                    </li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/twitter.png" width="25px"></a></li>
+                    <li><a href="#" class="social-icon"><img src="https://www.triplelog.com/assets/img/reddit.png" width="25px"></a></li>
+                  </ul>
+                </header>
+
+              <!-- Banner -->
+                <section id="banner">
+                  <div class="row">
+                    <div class="6u 12u$(medium)">
+                      <header>
+                        <h1>Custom QB Ratings</h1>
+                        <p>You decide who the best quarterback is</p>
+                      </header>
+                      <p>Do you feel like passer ratings are arbitrary?</p>
+                      <p>What if you were the arbiter? Decide which characteristics to weight and find the real elite quarterbacks.</p>
+                      <p>Quarterback statistics from every game in NFL history are loaded in and ready for your analysis. Try to come up with a way to make your favorite quarterback the greatest. Or use boring default ratings to identify the best weeks, seasons, and careers of all-time.</p>
+
+                    </div>
+                    <div class="6u 12u$(medium)">
+
+                      <form>
+                      
+                      <div class="row">
+                        <div class="3u">
+                          <label>Completion %</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compWeight" value="10" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compMin" value="30" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="compMax" value="77.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Yards</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsWeight" value="50" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsMin" value="3" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="yardsMax" value="12.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Touchdowns</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdWeight" value="40" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdMin" value="0" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="tdMax" value="11.875" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <label>Interceptions</label>
+                        </div>
+                        <div class="1u">
+                          <label>Weight:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intWeight" value="50" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Min:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intMin" value="0" type="text"></input>
+                        </div>
+                        <div class="1u">
+                          <label>Max:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="intMax" value="9.5" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="2u">
+                          <label>Min Atts:</label>
+                        </div>
+                        <div class="1u">
+                          <input id="minAtt" value="1" type="text"></input>
+                        </div>
+
+                        <div class="2u">
+                          <label>Num Disp</label>
+                        </div>
+                        <div class="1u">
+                          <input id="nRows" value="10" type="text"></input>
+                        </div>
+                        <div class="5u">
+                          <div class="select-wrapper">
+                            <select id="lengthType">
+                              <option value="1">Game</option>
+                              <option value="2" selected>Season</option>
+                              <option value="3">Postseason</option>
+                              <option value="4">First n weeks</option>
+                              <option value="5">Last n weeks</option>
+                              <option value="6">Any n consecutive weeks</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="1u">
+                          <input id="nweeks" value="1" type="text"></input>
+                        </div>
+                      </div>
+                      </form>
+                      <button class="button-primary" onclick="nflDefault();">NFL</button>
+                      <button class="button-primary" onclick="ncaaDefault();">NCAA</button>
+                      <button class="button-primary" onclick="runRatingBase();">Generate</button>
+                      <table id="qbTable">
+                      </table>
+                      <div id="output"></div>
+
+                    </div>
+
+                  </div>
+                </section>
+
+
+              
+
+            </div>
+          </div>
+
+        
+
+      </div>
+
+    <!-- Scripts -->
+
+      <script src="https://www.triplelog.com/assets/js/main.js"></script>
+      <script src="https://www.triplelog.com/nfl/custom-QB-rating.js"></script>
+      <script src="https://www.triplelog.com/nfl/custom-QB-rating-asm.js"></script>
+      <script src="https://www.triplelog.com/nfl/base-QB-rating.js"></script>
+
+
+  </body>
+</html>
