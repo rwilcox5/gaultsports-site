@@ -6,11 +6,12 @@
 -->
 <html>
   <head>
-    <title>TripleLog - Sports and Data Analysis</title>
+    <title>Pitch Charts by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
     <link rel="stylesheet" href="https://www.triplelog.com/assets/css/awesomplete.css" />
+    <link rel="icon" href="https://www.triplelog.com/assets/img/logo.png">
     <script src="https://www.triplelog.com/mlb/load-pitch-charts.js"></script>
     <script src="https://www.triplelog.com/assets/js/awesomplete.js"></script>
 
@@ -35,7 +36,6 @@
                           </button>
                           <div class="dropdown-content" id="nflDropdown">
                             <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
-                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
                           </div>
                       </li>
                     <li>
@@ -53,7 +53,6 @@
                           </button>
                           <div class="dropdown-content" id="mlbDropdown">
                             <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
-                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
                           </div>
                     </li>
                     <li>
@@ -69,72 +68,42 @@
                   </ul>
                 </header>
 
-                  <form>
+                  <section class="banner">
                     <div class="row">
-                      
-                      <div class="1u">
-                        <label>Pitcher:</label>
-                      </div>
-                      <div class="2u">
-                        <div class="select-wrapper">
-                          <input class="awesomplete" id="pid" onchange="updateYear(this.value);" />
+                      <div class="6u">
+                        
+                          <form>
+                          <div class="row">
 
-                        </div>
-                      </div>
-                      <div class="1u">
-                        <label>Year:</label>
-                      </div>
-                      <div class="2u">
-                        <div class="select-wrapper">
-                          <select id="year" onchange="updateMonth(this.value);">
-                            <option value="2017">2017</option>
-                            <option value="2016">2016</option>
-                            <option value="2015">2015</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="1u">
-                        <label>Month:</label>
-                      </div>
-                      <div class="1u">
-                        <div class="select-wrapper">
-                          <select id="month" onchange="updateDay(this.value);">
-                            <option value="10">Oct</option>
-                            <option value="09">Sep</option>
-                            <option value="08">Aug</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="1u">
-                        <label>Day:</label>
-                      </div>
-                      <div class="1u">
-                        <div class="select-wrapper">
-                          <select id="day">
-                            <option value="30">30</option>
-                            <option value="29">29</option>
-                            <option value="28">28</option>
-                            <option value="27">27</option>
-                            <option value="26">26</option>
-                            <option value="25">25</option>
-                            <option value="24">24</option>
-                            <option value="23">23</option>
-                            <option value="22">22</option>
-                            <option value="21">21</option>
-                            <option value="20">20</option>
-                            <option value="19">19</option>
-                          </select>
-                        </div>
+                            <div class="3u">
+                                <input class="awesomplete" id="pid" onchange="updateYear(this.value);" placeholder="Pitcher ID" />
+                            </div>
+                            <div class="3u">
+                                <select id="year" onchange="updateMonth(this.value);">
+                                  <option value="0" disabled selected>Year</option>
+                                </select>
+                            </div>
+                            <div class="3u">
+                                <select id="month" onchange="updateDay(this.value);">
+                                  <option value="0" disabled selected>Month</option>
+                                </select>
+                            </div>
+                            <div class="3u">
+                                <select id="day">
+                                  <option value="0" disabled selected>Day</option>
+                                </select>
+                            </div>
+                          </div>  
+                          </form>
+                        
                       </div>
 
+                      <div class="6u">
+                        <button class="button-primary" onclick="genRating();">Generate</button>
+                      </div>
                     </div>
-                  </form>
                     <div class="row">
-                      <div class="1u">
-                      <button class="button-primary" onclick="genRating();">G</button>
-                      </div>
-                      <div class="1u">
-                      <button class="button-primary" onclick="runRating();">S</button>
+                      <div class="12u" style="text-align:center" id="matchup_data">
                       </div>
                     </div>
                     <div class="row">
@@ -176,9 +145,7 @@
                         <img id="image">
                       </div>
                     </div>
-
-              
-
+                  </section>
             </div>
           </div>
 

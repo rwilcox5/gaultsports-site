@@ -6,10 +6,11 @@
 -->
 <html>
   <head>
-    <title>TripleLog - Sports and Data Analysis</title>
+    <title>QB Ratings by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://www.triplelog.com/assets/css/main.css" />
+    <link rel="icon" href="https://www.triplelog.com/assets/img/logo.png">
 
   </head>
   <body>
@@ -23,20 +24,19 @@
 
               <!-- Header -->
                 <header id="header">
-                  <a href="https://www.triplelog.com/index.html" class="logo"><strong>TripleLog</strong> Sports and Data</a>
+                  <a href="https://www.triplelog.com/index.html" class="logo"><img src="https://www.triplelog.com/assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
                   <ul class="icons">
                     <li>
                           <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
-                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl" >
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropnfl drop" >
                           </button>
                           <div class="dropdown-content" id="nflDropdown">
                             <a href="https://www.triplelog.com/nfl/custom-QB-rating.html">Custom QB Ratings</a>
-                            <a href="https://www.triplelog.com/nfl/game-breakdowns.html">Game Breakdowns</a>
                           </div>
                       </li>
                     <li>
                       <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
-                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf" >
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropncaaf drop" >
                           </button>
                           <div class="dropdown-content" id="ncaafDropdown">
                             <a href="https://www.triplelog.com/ncaaf/recruiting.html">Team Recruiting Rankings</a>
@@ -45,16 +45,15 @@
                         </li>
                     <li>
                       <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
-                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb" >
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropmlb drop" >
                           </button>
                           <div class="dropdown-content" id="mlbDropdown">
                             <a href="https://www.triplelog.com/mlb/pitch-charts.html">Pitch Charts</a>
-                            <a href="https://www.triplelog.com/mlb/war-by-age.html">WAR by Age</a>
                           </div>
                     </li>
                     <li>
                       <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Olympics
-                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic" >
+                            <img src="https://www.triplelog.com/assets/img/down.png" width="13px" class="dropolympic drop" >
                           </button>
                           <div class="dropdown-content" id="olympicDropdown">
                             <a href="https://www.triplelog.com/olympics/map.html">Olympic Map</a>
@@ -175,41 +174,58 @@
                         </div>
                       </div>
                       <div class="row">
-                        <div class="2u">
-                          <label>Min Atts:</label>
-                        </div>
                         <div class="1u">
-                          <input id="minAtt" value="1" type="text"></input>
+                          <label>Att. &ge;</label>
+                        </div>
+                        <div class="2u">
+                          <input id="minAtt" value="10" type="text"></input>
                         </div>
 
-                        <div class="2u">
-                          <label>Num Disp</label>
-                        </div>
                         <div class="1u">
+                          <label>Rows:</label>
+                        </div>
+                        <div class="2u">
                           <input id="nRows" value="10" type="text"></input>
                         </div>
-                        <div class="5u">
-                          <div class="select-wrapper">
+                        <div class="3u">
                             <select id="lengthType">
                               <option value="1">Game</option>
                               <option value="2" selected>Season</option>
                               <option value="3">Postseason</option>
                               <option value="4">First n weeks</option>
                               <option value="5">Last n weeks</option>
-                              <option value="6">Any n consecutive weeks</option>
+                              <option value="6">Any n cons. weeks</option>
                             </select>
-                          </div>
                         </div>
                         <div class="1u">
-                          <input id="nweeks" value="1" type="text"></input>
+                          <label>n:</label>
+                        </div>
+                        <div class="2u">
+                          <input id="nweeks" value="1" type="text" placeholder="n"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="3u">
+                          <select id="defaultType" onchange="toDefault(this.value);">
+                            <option value="NFL">NFL</option>
+                            <option value="NCAA">NCAA</option>
+                            <option value="Fantasy">Fantasy Pts</option>
+                            <option value="TripleLog">TripleLog</option>
+                          </select>
+                        </div>
+                        <div class="3u">
+                          <select id="outputType">
+                            <option value="Table">Table</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Markdown">Markdown</option>
+                          </select>
                         </div>
                       </div>
                       </form>
-                      <button class="button-primary" onclick="nflDefault();">NFL</button>
-                      <button class="button-primary" onclick="ncaaDefault();">NCAA</button>
                       <button class="button-primary" onclick="runRating();">Generate</button>
                       <table id="qbTable">
                       </table>
+                      <div id="markdown_spot"></div>
 
                     </div>
 
@@ -230,8 +246,9 @@
 
       <script src="https://www.triplelog.com/assets/js/main.js"></script>
       <script src="https://www.triplelog.com/nfl/custom-QB-rating.js"></script>
-      <script src="https://www.triplelog.com/nfl/custom-QB-rating-asm.js"></script>
+      <script src="https://www.triplelog.com/nfl/custom-QB-rating-old-asm.js"></script>
 
 
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="https://www.triplelog.com/privacy.html">Privacy Policy</a>&nbsp;<a href="https://www.triplelog.com/terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
   </body>
 </html>

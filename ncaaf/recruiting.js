@@ -9,6 +9,10 @@ function getRecs(nrows){
 	var table = document.getElementById("recTable");
       for (i=1;i<nrows+1;i++){
         table.insertRow(i); 
+        if (i%2==1){table.rows[i].style.background = "rgba(230, 235, 237, 0.25)";}
+        else {table.rows[i].style.background = "rgba(255, 255, 255, 0.25)";}
+        table.rows[i].style.border = "solid 1px rgba(210, 215, 217, 0.75)";
+        table.rows[i].style.borderWidth = "1px 0px 1px 0px";
 
         table.rows[i].insertCell(0); table.rows[i].cells[0].innerHTML = i;
         table.rows[i].insertCell(1); table.rows[i].cells[1].innerHTML = teams[i];

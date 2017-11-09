@@ -1,5 +1,5 @@
-var allpitches = [100,100,24,111,71,38,110,31,61,111,100,55];
-var allabs = [0,453265,519203,6,4,0,0,0];
+var allpitches = [100,100,24,12.195846342616864,4.609988906690987,93.1,111,71,38,11.623096208082705,5.244056518876015,92.9,110,31,61,10.504866406740089,6.613067555688037,93.4,111,100,55,9.903119617958652,5.113876633083695,94.4];
+var allabs = [0,3,519203,6,4,0,0,0];
 var num_abs = 1;
 var nabsc = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var returnabs = [];
@@ -17,15 +17,27 @@ return allabs[returnabs[2*i+1]]-allabs[returnabs[2*i]];
 }
 function sendAge(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3];
+        return allpitches[(firstp+ii)*6];
 }
 function sendX(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3+1];
+        return allpitches[(firstp+ii)*6+1];
 }
 function sendY(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3+2];
+        return allpitches[(firstp+ii)*6+2];
+}
+function sendXM(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+3];
+}
+function sendYM(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+4];
+}
+function sendVel(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+5];
 }
 function sendInn(i){
         return nabsc[i];
@@ -34,3 +46,4 @@ function sendBatter(i){
         var abn = returnabs[2*i];
         return allabs[abn+2];
 }
+function sendEvent(i){var abn = returnabs[2*i]; return allabs[abn+1];}

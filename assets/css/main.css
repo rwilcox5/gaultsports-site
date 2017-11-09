@@ -2162,7 +2162,7 @@ tr.strikeout td:before {
 
 		}
 
-	a {
+	a:not(.social-icon) {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -2951,14 +2951,14 @@ tr.strikeout td:before {
 			}
 
 		table td {
-			padding: 0.75em 0.75em;
+			padding: 0.5em 0.25em;
 		}
 
 		table th {
 			color: #3d4449;
 			font-size: 0.9em;
 			font-weight: 600;
-			padding: 0 0.75em 0.75em 0.75em;
+			padding: 0 0.5em 0.5em 0.5em;
 			text-align: left;
 		}
 
@@ -3771,4 +3771,11 @@ tr.strikeout td:before {
 		#footer .copyright a {
 			color: inherit;
 		}
+	#footer {
+		background-color:rgba(225,225,225,.5);
+		text-align:center;
+	}
 
+	#header img:not(.drop) {
+		vertical-align:bottom;
+	}

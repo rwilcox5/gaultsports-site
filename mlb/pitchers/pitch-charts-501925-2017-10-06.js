@@ -1,5 +1,5 @@
-var allpitches = [311,76,55,300,100,88,111,1,42,100,0,73,111,0,55,110,40,52];
-var allabs = [0,501925,592450,9,1,501925,596142,9,6,0,0,0];
+var allpitches = [311,76,55,4.9243191887907605,4.48270364003808,81.2,300,100,88,5.186079303788496,5.342754982435537,82.1,111,1,42,-11.12723179485361,-1.396513909976856,88.9,100,0,73,-8.757575773484053,-3.105134297407572,89.1,111,0,55,-9.418808513083668,-2.139557334021588,88.7,110,40,52,-10.259742754702849,-1.933258464681396,89.4];
+var allabs = [0,2,592450,9,1,3,596142,9,6,0,0,0];
 var num_abs = 2;
 var nabsc = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 var returnabs = [];
@@ -17,15 +17,27 @@ return allabs[returnabs[2*i+1]]-allabs[returnabs[2*i]];
 }
 function sendAge(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3];
+        return allpitches[(firstp+ii)*6];
 }
 function sendX(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3+1];
+        return allpitches[(firstp+ii)*6+1];
 }
 function sendY(i, ii){
         var firstp = allabs[returnabs[2*i]];
-        return allpitches[(firstp+ii)*3+2];
+        return allpitches[(firstp+ii)*6+2];
+}
+function sendXM(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+3];
+}
+function sendYM(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+4];
+}
+function sendVel(i, ii){
+        var firstp = allabs[returnabs[2*i]];
+        return allpitches[(firstp+ii)*6+5];
 }
 function sendInn(i){
         return nabsc[i];
@@ -34,3 +46,4 @@ function sendBatter(i){
         var abn = returnabs[2*i];
         return allabs[abn+2];
 }
+function sendEvent(i){var abn = returnabs[2*i]; return allabs[abn+1];}
