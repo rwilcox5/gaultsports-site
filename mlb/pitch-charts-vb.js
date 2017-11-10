@@ -16,7 +16,7 @@ function getPitcherName(pitcher_id){
 
 }
 function genRating(){
-  window.location ="http://www.triplelog.com/mlb/pitch-charts-vb.html?pid="+document.getElementById('pid').value+"&bid="+document.getElementById('bid').value;
+  window.location ="../mlb/pitch-charts-vb.html?pid="+document.getElementById('pid').value+"&bid="+document.getElementById('bid').value;
 }
 retroEvents = ['Unknown','Nothing','Out','Strikeout','Stolen Base','Def. Indifference','Caught Stealing','Pickoff Error','Pickoff','Wild Pitch','Passed Ball','Balk','Other','F. Error','Walk','IBB','HBP','Interference','Error','F. Choice','Single','Double','Triple','Home Run','Missing'];
 function getEventName(i){
@@ -37,12 +37,9 @@ function runRating(pid,bid){
   document.getElementById('data_spot').innerHTML = '<div style="display:none;"><canvas id="data_canvas" width="222" height="222" style="position:relative; border: 0px;"></canvas></div>';
   document.getElementById('gif_spot').innerHTML = '<div style="display:none;"><canvas id="gif_canvas" width="222" height="222" style="position:relative; border: 0px;"></canvas></div>';
 
-  data_canvas = document.getElementById('data_canvas');
   gif_canvas = document.getElementById('gif_canvas');
   matchup_info = document.getElementById('matchup_info');
   matchup_info.innerHTML = getPitcherName(parseInt(pid))+' vs. '+getBatterName(parseInt(bid));
-  draw_data();
-
 
   getData();
 

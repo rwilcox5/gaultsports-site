@@ -6,7 +6,7 @@ batter_names = ['G. Blanco','A. Pollock','P. Goldschmid','J. Martinez','W. Merri
 npitchers = 223;
 
 function genRating(){
-  window.location ="http://www.triplelog.com/mlb/pitch-charts.html?pid="+document.getElementById('pid').value+"&year="+document.getElementById('year').value+"&month="+document.getElementById('month').value+"&day="+document.getElementById('day').value;
+  window.location ="../mlb/pitch-charts.html?pid="+document.getElementById('pid').value+"&year="+document.getElementById('year').value+"&month="+document.getElementById('month').value+"&day="+document.getElementById('day').value;
 }
 function getPitcherName(pitcher_id){
   for (i=0;i<npitchers;i++){if (pitcher_ids[i*3]==pitcher_id){return pitcher_names[i];}}
