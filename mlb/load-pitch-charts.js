@@ -19,7 +19,7 @@ function loadJS(){
 			
 			if (parseInt(day)<10){day = '0'+day.toString()}
 			if (parseInt(month)<10){month = '0'+month.toString()}
-		    var filename = '/mlb/pitchers/pitch-charts-'+pid.toString()+'-'+year.toString()+'-'+month.toString()+'-'+day.toString()+'.js';
+		    var filename = '../mlb/pitchers/pitch-charts-'+pid.toString()+'-'+year.toString()+'-'+month.toString()+'-'+day.toString()+'.js';
 	        var fileref=document.createElement('script');
 	        fileref.setAttribute("type","text/javascript");
 	        fileref.setAttribute("src", filename);

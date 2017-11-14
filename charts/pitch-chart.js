@@ -1,6 +1,6 @@
-function createBG(left_x,center_y,pitches,pitch_canvas,batter_name,pcn,event_name,chart_type){
+function createBG(left_x,center_y,pitches,pitch_canvas,batter_name,pcn,event_name,chart_type,cwidth){
 	pitch_initCanvas(pitch_canvas,batter_name,center_y,event_name,chart_type);
-	var pci;
+	var pci; var r = (cwidth-left_x)*10./(400-120);
 	if (pitches.length<11){
 		for (pci=0;pci<pitches.length;pci++){
 			if (pitches[pci][0]==1){colors = [255,0,0];}
@@ -11,7 +11,7 @@ function createBG(left_x,center_y,pitches,pitch_canvas,batter_name,pcn,event_nam
 			ocolors= [255-colors[0],255-colors[1],255-colors[2]];
 			if (pitches[pci][1]==0){alpha=.3;}
 			else {alpha = 1.0;}
-			draw_balls(left_x+pci*25,center_y,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8]);
+			draw_balls(left_x+pci*2*(r+2),center_y,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8],r);
 		}
 	}	
 	else{
@@ -24,7 +24,7 @@ function createBG(left_x,center_y,pitches,pitch_canvas,batter_name,pcn,event_nam
 			ocolors= [255-colors[0],255-colors[1],255-colors[2]];
 			if (pitches[pci][1]==0){alpha=.3;}
 			else {alpha = 1.0;}
-			draw_balls(left_x+pci*25,center_y,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8]);
+			draw_balls(left_x+pci*2*(r+2),center_y,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8],r);
 		}
 		for (pci=10;pci<pitches.length;pci++){
 			if (pitches[pci][0]==1){colors = [255,0,0];}
@@ -35,7 +35,7 @@ function createBG(left_x,center_y,pitches,pitch_canvas,batter_name,pcn,event_nam
 			ocolors= [255-colors[0],255-colors[1],255-colors[2]];
 			if (pitches[pci][1]==0){alpha=.3;}
 			else {alpha = 1.0;}
-			draw_balls(left_x+(pci-10)*25,center_y+25,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8]);
+			draw_balls(left_x+(pci-10)*2*(r+2),center_y+25,"rgba("+colors[0]+", "+colors[1]+", "+colors[2]+", "+alpha+")",pitches[pci][2],"rgba("+ocolors[0]+", "+ocolors[1]+", "+ocolors[2]+", 1.0)",pitches[pci][3],pitches[pci][4],pitches[pci][5],pcn,pitches[pci][6],pitches[pci][7],pitches[pci][8],r);
 		}
 	}
 
@@ -51,7 +51,7 @@ function pitch_initCanvas(pitch_canvas,batter_name,center_y,event_name,chart_typ
    }
 
    pitch_context = pitch_canvas.getContext('2d');
-   pitch_context.font = "bold 12px sans-serif";
+   pitch_context.font = "12px sans-serif";
    pitch_context.lineWidth = 1;
    pitch_context.fillStyle = "black";
    if (chart_type=='game'){  pitch_context.fillText(batter_name,0,center_y+6);pitch_context.fillText(event_name,85,center_y+6);}
@@ -76,10 +76,10 @@ function write_text(age,row){
 
 }
 pitch_balls = [[],[],[],[],[],[],[],[],[]];
-function draw_balls(center_x, center_y,color,swing,outlinecolor,loc_x,loc_y,lenab,pcn,move_x,move_y,velocity){
+function draw_balls(center_x, center_y,color,swing,outlinecolor,loc_x,loc_y,lenab,pcn,move_x,move_y,velocity,r){
 
 	pitch_context.beginPath();
-	pitch_context.arc(center_x,center_y,10,0,2*Math.PI);
+	pitch_context.arc(center_x,center_y,r,0,2*Math.PI);
 	pitch_context.fillStyle = color;
 	pitch_context.fill();	
 	pitch_context.closePath();
@@ -88,13 +88,13 @@ function draw_balls(center_x, center_y,color,swing,outlinecolor,loc_x,loc_y,lena
 	pitch_context.lineWidth = 1;
 	pitch_context.strokeStyle = "white";
 	pitch_context.beginPath();
-	pitch_context.arc(center_x,center_y,10,0,2*Math.PI);
+	pitch_context.arc(center_x,center_y,r,0,2*Math.PI);
 	pitch_context.stroke();	
 	pitch_context.closePath();
 	pitch_context.lineWidth = 1;
 	pitch_context.strokeStyle = "black";
 	pitch_context.beginPath();
-	pitch_context.arc(center_x,center_y,11,0,2*Math.PI);
+	pitch_context.arc(center_x,center_y,r+1,0,2*Math.PI);
 	pitch_context.stroke();	
 	pitch_context.closePath();
 	}
@@ -103,11 +103,11 @@ function draw_balls(center_x, center_y,color,swing,outlinecolor,loc_x,loc_y,lena
 	pitch_context.lineWidth = 1;
 
 	pitch_context.beginPath();
-	pitch_context.arc(center_x-9,center_y+9,10,-Math.PI/2,0);
+	pitch_context.arc(center_x-r,center_y+r,r,-Math.PI/2,0);
 	pitch_context.stroke();
 
 	pitch_context.beginPath();
-	pitch_context.arc(center_x+9,center_y-9,10,Math.PI/2,Math.PI);
+	pitch_context.arc(center_x+r,center_y-r,r,Math.PI/2,Math.PI);
 	pitch_context.stroke();
 
 	pitch_balls[pcn].push([center_x,center_y,loc_x,loc_y,color,swing,outlinecolor,0,lenab,move_x,move_y,velocity]);
@@ -145,7 +145,7 @@ function map_click_gif(ev)
      x = ev.layerX;
      y = ev.layerY;
    }
-   pcn = getPCN(ev.srcElement.id);
+   pcn = getPCN(ev.target.id);
 
    for (pbi=0;pbi<pitch_balls[pcn].length;pbi++){
    	if (Math.pow(x-pitch_balls[pcn][pbi][0],2)+Math.pow(y-pitch_balls[pcn][pbi][1],2)<144){
@@ -192,8 +192,6 @@ function draw_loc_gif(center_x, center_y,color,swing,outlinecolor,move_x,move_y,
 	x0b=-Math.sqrt((100-y01*y01));
 	if (Math.abs(y01/x0a+(xi-x0a)/(yi-y01))<Math.abs(y01/x0b+(xi-x0b)/(yi-y01))){cx_chg1=x0a;}
 	else {cx_chg1=x0b;}
-	console.log(y01);
-	console.log(x0a);
 	xi=-move_x*120.0/17.0;
 	yi=(move_y-10.0)*120.0/17.0;
 	y02 = (200*yi-Math.sqrt(40000*yi*yi-4*(yi*yi+xi*xi)*(10000-100*xi*xi)))/(2*(yi*yi+xi*xi));

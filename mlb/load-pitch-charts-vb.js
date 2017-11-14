@@ -15,7 +15,7 @@ function loadJS(){
 		bid = getQueryVariable('bid');
 		if (pid != 0){
 			
-		    var filename = '/mlb/pitchers/pitch-charts-vb-'+pid.toString()+'-'+bid.toString()+'.js';
+		    var filename = '../mlb/pitchers/pitch-charts-vb-'+pid.toString()+'-'+bid.toString()+'.js';
 	        var fileref=document.createElement('script');
 	        fileref.setAttribute("type","text/javascript");
 	        fileref.setAttribute("src", filename);
