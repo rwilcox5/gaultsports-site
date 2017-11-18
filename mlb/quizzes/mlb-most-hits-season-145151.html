@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+<script>var rawDataArray = ['Nap Lajoie','PHA',1901,232.0,'Jesse Burkett','SLN',1901,226.0,'Nap Lajoie','CLE',1910,227.0,'Ty Cobb','DET',1911,248.0,'Shoeless Joe Jackson','CLE',1911,233.0,'Ty Cobb','DET',1912,226.0,'Shoeless Joe Jackson','CLE',1912,226.0,'Ty Cobb','DET',1917,225.0,'George Sisler','SLA',1920,257.0,'Eddie Collins','CHA',1920,224.0,'Harry Heilmann','DET',1921,237.0,'Jack Tobin','SLA',1921,236.0,'Rogers Hornsby','SLN',1921,235.0,'Rogers Hornsby','SLN',1922,250.0,'George Sisler','SLA',1922,246.0,'Frankie Frisch','NY1',1923,223.0,'Rogers Hornsby','SLN',1924,227.0,'Al Simmons','PHA',1925,253.0,'Jim Bottomley','SLN',1925,227.0,'Sam Rice','WS1',1925,227.0,'Harry Heilmann','DET',1925,225.0,'George Sisler','SLA',1925,224.0,'Paul Waner','PIT',1927,237.0,'Earle Combs','NYA',1927,231.0,'Lloyd Waner','PIT',1927,223.0,'Heinie Manush','SLA',1928,241.0,'Freddie Lindstrom','NY1',1928,231.0,'Paul Waner','PIT',1928,223.0,'Lefty O\'Doul','PHI',1929,254.0,'Lloyd Waner','PIT',1929,234.0,'Rogers Hornsby','CHN',1929,229.0,'Bill Terry','NY1',1929,226.0,'Bill Terry','NY1',1930,254.0,'Chuck Klein','PHI',1930,250.0,'Babe Herman','BRO',1930,241.0,'Freddie Lindstrom','NY1',1930,231.0,'Kiki Cuyler','CHN',1930,228.0,'Johnny Hodapp','CLE',1930,225.0,'Chuck Klein','PHI',1932,226.0,'Bill Terry','NY1',1932,225.0,'Chuck Klein','PHI',1933,223.0,'Billy Herman','CHN',1935,227.0,'Joe Medwick','SLN',1935,224.0,'Earl Averill','CLE',1936,232.0,'Charlie Gehringer','DET',1936,227.0,'Joe Medwick','SLN',1936,223.0,'Joe Medwick','SLN',1937,237.0,'Tommy Holmes','BSN',1945,224.0,'Stan Musial','SLN',1946,228.0,'Stan Musial','SLN',1948,230.0,'Hank Aaron','ML1',1959,223.0,'Tommy Davis','LAN',1962,230.0,'Matty Alou','PIT',1969,231.0,'Joe Torre','SLN',1971,230.0,'Pete Rose','CIN',1973,230.0,'Rod Carew','MIN',1977,239.0,'Willie Wilson','KCA',1980,230.0,'Wade Boggs','BOS',1985,240.0,'Don Mattingly','NYA',1986,238.0,'Kirby Puckett','MIN',1986,223.0,'Kirby Puckett','MIN',1988,234.0,'Lance Johnson','NYN',1996,227.0,'Paul Molitor','MIN',1996,225.0,'Darin Erstad','ANA',2000,240.0,'Ichiro Suzuki','SEA',2001,242.0,'Ichiro Suzuki','SEA',2004,262.0,'Ichiro Suzuki','SEA',2006,224.0,'Ichiro Suzuki','SEA',2007,238.0,'Ichiro Suzuki','SEA',2009,225.0,'Jose Altuve','HOU',2014,225.0];</script>
+</head>
+  <body onload="createAnswers();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                                <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                              </button>
+                              <div class="dropdown-content" id="mlbDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                                <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                              </button>
+                              <div class="dropdown-content" id="ncaafDropdown">
+                                <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                                <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                              </div>
+                            </li>
+                        <li>
+                              <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                                <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                              </button>
+                              <div class="dropdown-content" id="nflDropdown">
+                                <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                              </div>
+                          </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                                <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                              </button>
+                              <div class="dropdown-content" id="olympicDropdown">
+                                <a href="../../olympics/map.html">Olympic Map</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                            <div class="12u" id='question_str'>
+                                What batters have the most Hits in one season 
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="6u">
+                                <input class="awesomplete" id="answer" placeholder="Answer" type="text"/>
+                            </div>
+
+                            <div class="6u">
+                                Points: <span id="points">0</span>
+                            </div>
+
+                    </div>
+                    <div class="row" id="answer_spot"></div>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../mlb/quiz-names/quiz-batter-17.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

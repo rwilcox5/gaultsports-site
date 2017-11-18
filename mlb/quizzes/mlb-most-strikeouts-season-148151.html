@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+<script>var rawDataArray = ['Don Drysdale','LAN',1959,242.0,'Don Drysdale','LAN',1960,246.0,'Sandy Koufax','LAN',1961,269.0,'Don Drysdale','LAN',1962,232.0,'Sandy Koufax','LAN',1963,306.0,'Jim Maloney','CIN',1963,265.0,'Don Drysdale','LAN',1963,251.0,'Juan Marichal','SFN',1963,248.0,'Bob Veale','PIT',1964,250.0,'Bob Gibson','SLN',1964,245.0,'Don Drysdale','LAN',1964,237.0,'Sandy Koufax','LAN',1964,223.0,'Sandy Koufax','LAN',1965,382.0,'Sam McDowell','CLE',1965,325.0,'Bob Veale','PIT',1965,276.0,'Bob Gibson','SLN',1965,270.0,'Jim Bunning','PHI',1965,268.0,'Jim Maloney','CIN',1965,244.0,'Juan Marichal','SFN',1965,240.0,'Chris Short','PHI',1965,237.0,'Mickey Lolich','DET',1965,226.0,'Sandy Koufax','LAN',1966,317.0,'Jim Bunning','PHI',1966,252.0,'Bob Veale','PIT',1966,229.0,'Bob Gibson','SLN',1966,225.0,'Sam McDowell','CLE',1966,225.0,'Jim Bunning','PHI',1967,253.0,'Jim Lonborg','BOS',1967,246.0,'Fergie Jenkins','CHN',1967,236.0,'Sam McDowell','CLE',1967,236.0,'Gaylord Perry','SFN',1967,230.0,'Sam McDowell','CLE',1968,283.0,'Denny McLain','DET',1968,280.0,'Bob Gibson','SLN',1968,268.0,'Luis Tiant','CLE',1968,264.0,'Fergie Jenkins','CHN',1968,260.0,'Dean Chance','MIN',1968,234.0,'Bill Singer','LAN',1968,227.0,'Sam McDowell','CLE',1969,279.0,'Fergie Jenkins','CHN',1969,273.0,'Mickey Lolich','DET',1969,271.0,'Bob Gibson','SLN',1969,269.0,'Bill Singer','LAN',1969,247.0,'Don Wilson','HOU',1969,235.0,'Gaylord Perry','SFN',1969,233.0,'Larry Dierker','HOU',1969,232.0,'Sam McDowell','CLE',1970,304.0,'Tom Seaver','NYN',1970,283.0,'Bob Gibson','SLN',1970,274.0,'Fergie Jenkins','CHN',1970,274.0,'Mickey Lolich','DET',1970,230.0,'Mickey Lolich','DET',1971,308.0,'Vida Blue','OAK',1971,301.0,'Tom Seaver','NYN',1971,289.0,'Fergie Jenkins','CHN',1971,263.0,'Bill Stoneman','MON',1971,251.0,'Joe Coleman','DET',1971,236.0,'Clay Kirby','SDN',1971,231.0,'Bert Blyleven','MIN',1971,224.0,'Nolan Ryan','CAL',1972,329.0,'Steve Carlton','PHI',1972,310.0,'Mickey Lolich','DET',1972,250.0,'Tom Seaver','NYN',1972,249.0,'Gaylord Perry','CLE',1972,234.0,'Bert Blyleven','MIN',1972,228.0,'Nolan Ryan','CAL',1973,383.0,'Bert Blyleven','MIN',1973,258.0,'Tom Seaver','NYN',1973,251.0,'Bill Singer','CAL',1973,241.0,'Gaylord Perry','CLE',1973,238.0,'Steve Carlton','PHI',1973,223.0,'Nolan Ryan','CAL',1974,367.0,'Bert Blyleven','MIN',1974,249.0,'Steve Carlton','PHI',1974,240.0,'Fergie Jenkins','TEX',1974,225.0,'Frank Tanana','CAL',1975,269.0,'Tom Seaver','NYN',1975,243.0,'Bert Blyleven','MIN',1975,233.0,'Nolan Ryan','CAL',1976,327.0,'Frank Tanana','CAL',1976,261.0,'Tom Seaver','NYN',1976,235.0,'Nolan Ryan','CAL',1977,341.0,'Phil Niekro','ATL',1977,262.0,'Dennis Leonard','KCA',1977,244.0,'J.R. Richard','HOU',1978,303.0,'Nolan Ryan','CAL',1978,260.0,'Ron Guidry','NYA',1978,248.0,'Phil Niekro','ATL',1978,248.0,'Tom Seaver','CIN',1978,226.0,'J.R. Richard','HOU',1979,313.0,'Nolan Ryan','CAL',1979,223.0,'Steve Carlton','PHI',1980,286.0,'Steve Carlton','PHI',1982,286.0,'Mario Soto','CIN',1982,274.0,'Nolan Ryan','HOU',1982,245.0,'Steve Carlton','PHI',1983,275.0,'Mario Soto','CIN',1983,242.0,'Jack Morris','DET',1983,232.0,'Dwight Gooden','NYN',1984,276.0,'Fernando Valenzuela','LAN',1984,240.0,'Dwight Gooden','NYN',1985,268.0,'Mike Scott','HOU',1986,306.0,'Mark Langston','SEA',1986,245.0,'Fernando Valenzuela','LAN',1986,242.0,'Roger Clemens','BOS',1986,238.0,'Jack Morris','DET',1986,223.0,'Nolan Ryan','HOU',1987,270.0,'Mark Langston','SEA',1987,262.0,'Roger Clemens','BOS',1987,256.0,'Teddy Higuera','ML4',1987,240.0,'Mike Scott','HOU',1987,233.0,'Charlie Hough','TEX',1987,223.0,'Roger Clemens','BOS',1988,291.0,'Mark Langston','SEA',1988,235.0,'Nolan Ryan','HOU',1988,228.0,'Nolan Ryan','TEX',1989,301.0,'Roger Clemens','BOS',1989,230.0,'David Cone','NYN',1990,233.0,'Nolan Ryan','TEX',1990,232.0,'Dwight Gooden','NYN',1990,223.0,'Ramon Martinez','LAN',1990,223.0,'Roger Clemens','BOS',1991,241.0,'David Cone','NYN',1991,241.0,'Randy Johnson','SEA',1991,228.0,'Randy Johnson','SEA',1992,241.0,'Randy Johnson','SEA',1993,308.0,'Jose Rijo','CIN',1993,227.0,'Randy Johnson','SEA',1995,294.0,'Hideo Nomo','LAN',1995,236.0,'John Smoltz','ATL',1996,276.0,'Roger Clemens','BOS',1996,257.0,'Hideo Nomo','LAN',1996,234.0,'Curt Schilling','PHI',1997,319.0,'Pedro Martinez','MON',1997,305.0,'Roger Clemens','TOR',1997,292.0,'Randy Johnson','SEA',1997,291.0,'John Smoltz','ATL',1997,241.0,'Hideo Nomo','LAN',1997,233.0,'Curt Schilling','PHI',1998,300.0,'Roger Clemens','TOR',1998,271.0,'Kevin Brown','SDN',1998,257.0,'Pedro Martinez','BOS',1998,251.0,'Kerry Wood','CHN',1998,233.0,'Randy Johnson','ARI',1999,364.0,'Pedro Martinez','BOS',1999,313.0,'Randy Johnson','ARI',2000,347.0,'Pedro Martinez','BOS',2000,284.0,'Randy Johnson','ARI',2001,372.0,'Curt Schilling','ARI',2001,293.0,'Randy Johnson','ARI',2002,334.0,'Curt Schilling','ARI',2002,316.0,'Pedro Martinez','BOS',2002,239.0,'Kerry Wood','CHN',2003,266.0,'Mark Prior','CHN',2003,245.0,'Javier Vazquez','MON',2003,241.0,'Randy Johnson','ARI',2004,290.0,'Johan Santana','MIN',2004,265.0,'Ben Sheets','MIL',2004,264.0,'Jason Schmidt','SFN',2004,251.0,'Oliver Perez','PIT',2004,239.0,'Pedro Martinez','BOS',2004,227.0,'Johan Santana','MIN',2005,238.0,'Johan Santana','MIN',2006,245.0,'Jake Peavy','SDN',2007,240.0,'Scott Kazmir','TBA',2007,239.0,'Johan Santana','MIN',2007,235.0,'Tim Lincecum','SFN',2008,265.0,'A.J. Burnett','TOR',2008,231.0,'Justin Verlander','DET',2009,269.0,'Tim Lincecum','SFN',2009,261.0,'Zack Greinke','KCA',2009,242.0,'Javier Vazquez','ATL',2009,238.0,'Jon Lester','BOS',2009,225.0,'Dan Haren','ARI',2009,223.0,'Jered Weaver','LAA',2010,233.0,'Felix Hernandez','SEA',2010,232.0,'Tim Lincecum','SFN',2010,231.0,'Jon Lester','BOS',2010,225.0,'Justin Verlander','DET',2011,250.0,'Clayton Kershaw','LAN',2011,248.0,'Cliff Lee','PHI',2011,238.0,'CC Sabathia','NYA',2011,230.0,'James Shields','TBA',2011,225.0,'Justin Verlander','DET',2012,239.0,'Max Scherzer','DET',2012,231.0,'R.A. Dickey','NYN',2012,230.0,'Clayton Kershaw','LAN',2012,229.0,'Felix Hernandez','SEA',2012,223.0,'James Shields','TBA',2012,223.0,'Yu Darvish','TEX',2013,277.0,'Max Scherzer','DET',2013,240.0,'Clayton Kershaw','LAN',2013,232.0,'Chris Sale','CHA',2013,226.0,'Corey Kluber','CLE',2014,269.0,'Max Scherzer','DET',2014,252.0,'Felix Hernandez','SEA',2014,248.0,'Johnny Cueto','CIN',2014,242.0,'Stephen Strasburg','WAS',2014,242.0,'Clayton Kershaw','LAN',2014,239.0,'Clayton Kershaw','LAN',2015,301.0,'Max Scherzer','WAS',2015,276.0,'Chris Sale','CHA',2015,274.0,'Chris Archer','TBA',2015,252.0,'Corey Kluber','CLE',2015,245.0,'Jake Arrieta','CHN',2015,236.0,'Madison Bumgarner','SFN',2015,234.0,'Max Scherzer','WAS',2016,284.0,'Justin Verlander','DET',2016,254.0,'Jose Fernandez','MIA',2016,253.0,'Madison Bumgarner','SFN',2016,251.0,'Chris Archer','TBA',2016,233.0,'Chris Sale','CHA',2016,233.0,'David Price','BOS',2016,228.0,'Corey Kluber','CLE',2016,227.0];</script>
+</head>
+  <body onload="createAnswers();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                                <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                              </button>
+                              <div class="dropdown-content" id="mlbDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                                <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                              </button>
+                              <div class="dropdown-content" id="ncaafDropdown">
+                                <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                                <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                              </div>
+                            </li>
+                        <li>
+                              <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                                <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                              </button>
+                              <div class="dropdown-content" id="nflDropdown">
+                                <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                              </div>
+                          </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                                <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                              </button>
+                              <div class="dropdown-content" id="olympicDropdown">
+                                <a href="../../olympics/map.html">Olympic Map</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                            <div class="12u" id='question_str'>
+                                What pitchers have the most Strikeouts in one season 
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="6u">
+                                <input class="awesomplete" id="answer" placeholder="Answer" type="text"/>
+                            </div>
+
+                            <div class="6u">
+                                Points: <span id="points">0</span>
+                            </div>
+
+                    </div>
+                    <div class="row" id="answer_spot"></div>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../mlb/quiz-names/quiz-pitcher-23.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

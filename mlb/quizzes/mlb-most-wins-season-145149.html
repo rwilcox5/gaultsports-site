@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+<script>var rawDataArray = ['Joe McGinnity','BRO',1900,28.0,'Joe McGinnity','BRO',1900,28.0,'Cy Young','BOS',1901,33.0,'Joe McGinnity','BLA',1901,26.0,'Bill Donovan','BRO',1901,25.0,'Clark Griffith','CHA',1901,24.0,'Cy Young','BOS',1902,32.0,'Jack Chesbro','PIT',1902,28.0,'Togie Pittinger','BSN',1902,27.0,'Vic Willis','BSN',1902,27.0,'Rube Waddell','PHA',1902,24.0,'Joe McGinnity','NY1',1903,31.0,'Christy Mathewson','NY1',1903,30.0,'Cy Young','BOS',1903,28.0,'Sam Leever','PIT',1903,25.0,'Deacon Phillippe','PIT',1903,25.0,'Jack Chesbro','NYA',1904,41.0,'Joe McGinnity','NY1',1904,35.0,'Christy Mathewson','NY1',1904,33.0,'Eddie Plank','PHA',1904,26.0,'Cy Young','BOS',1904,26.0,'Rube Waddell','PHA',1904,25.0,'Christy Mathewson','NY1',1905,31.0,'Rube Waddell','PHA',1905,27.0,'Eddie Plank','PHA',1905,24.0,'Joe McGinnity','NY1',1906,27.0,'Al Orth','NYA',1906,27.0,'Mordecai Brown','CHN',1906,26.0,'Addie Joss','CLE',1907,27.0,'Doc White','CHA',1907,27.0,'Bill Donovan','DET',1907,25.0,'Ed Killian','DET',1907,25.0,'Christy Mathewson','NY1',1907,24.0,'Eddie Plank','PHA',1907,24.0,'Ed Walsh','CHA',1907,24.0,'Ed Walsh','CHA',1908,40.0,'Christy Mathewson','NY1',1908,37.0,'Mordecai Brown','CHN',1908,29.0,'Addie Joss','CLE',1908,24.0,'Ed Reulbach','CHN',1908,24.0,'Ed Summers','DET',1908,24.0,'George Mullin','DET',1909,29.0,'Mordecai Brown','CHN',1909,27.0,'Howie Camnitz','PIT',1909,25.0,'Christy Mathewson','NY1',1909,25.0,'Frank Smith','CHA',1909,25.0,'Jack Coombs','PHA',1910,31.0,'Christy Mathewson','NY1',1910,27.0,'Russ Ford','NYA',1910,26.0,'Mordecai Brown','CHN',1910,25.0,'Walter Johnson','WS1',1910,25.0,'Pete Alexander','PHI',1911,28.0,'Jack Coombs','PHA',1911,28.0,'Ed Walsh','CHA',1911,27.0,'Christy Mathewson','NY1',1911,26.0,'Walter Johnson','WS1',1911,25.0,'Rube Marquard','NY1',1911,24.0,'Smoky Joe Wood','BOS',1912,34.0,'Walter Johnson','WS1',1912,33.0,'Ed Walsh','CHA',1912,27.0,'Larry Cheney','CHN',1912,26.0,'Rube Marquard','NY1',1912,26.0,'Eddie Plank','PHA',1912,26.0,'Bob Groom','WS1',1912,24.0,'Claude Hendrix','PIT',1912,24.0,'Walter Johnson','WS1',1913,36.0,'Tom Seaton','PHI',1913,27.0,'Christy Mathewson','NY1',1913,25.0,'Claude Hendrix','CHF',1914,29.0,'Walter Johnson','WS1',1914,28.0,'Pete Alexander','PHI',1914,27.0,'Bill James','BSN',1914,26.0,'Jack Quinn','BLF',1914,26.0,'Dick Rudolph','BSN',1914,26.0,'Jeff Tesreau','NY1',1914,26.0,'Cy Falkenberg','IND',1914,25.0,'Tom Seaton','BRF',1914,25.0,'Christy Mathewson','NY1',1914,24.0,'George Suggs','BLF',1914,24.0,'Pete Alexander','PHI',1915,31.0,'Walter Johnson','WS1',1915,27.0,'George McConnell','CHF',1915,25.0,'Hooks Dauss','DET',1915,24.0,'Red Faber','CHA',1915,24.0,'Jim Scott','CHA',1915,24.0,'Pete Alexander','PHI',1916,33.0,'Walter Johnson','WS1',1916,25.0,'Jeff Pfeffer','BRO',1916,25.0,'Bob Shawkey','NYA',1916,24.0,'Pete Alexander','PHI',1917,30.0,'Eddie Cicotte','CHA',1917,28.0,'Babe Ruth','BOS',1917,24.0,'Fred Toney','CIN',1917,24.0,'Eddie Cicotte','CHA',1919,29.0,'Jesse Barnes','NY1',1919,25.0,'Stan Coveleski','CLE',1919,24.0,'Jim Bagby','CLE',1920,31.0,'Pete Alexander','CHN',1920,27.0,'Carl Mays','NYA',1920,26.0,'Wilbur Cooper','PIT',1920,24.0,'Stan Coveleski','CLE',1920,24.0,'Carl Mays','NYA',1921,27.0,'Urban Shocker','SLA',1921,27.0,'Red Faber','CHA',1921,25.0,'Eddie Rommel','PHA',1922,27.0,'Bullet Joe Bush','NYA',1922,26.0,'Eppa Rixey','CIN',1922,25.0,'Urban Shocker','SLA',1922,24.0,'Dolf Luque','CIN',1923,27.0,'George Uhle','CLE',1923,26.0,'Johnny Morrison','PIT',1923,25.0,'Dazzy Vance','BRO',1924,28.0,'George Uhle','CLE',1926,27.0,'Charlie Root','CHN',1927,26.0,'Jesse Haines','SLN',1927,24.0,'Larry Benton','NY1',1928,25.0,'Burleigh Grimes','PIT',1928,25.0,'Lefty Grove','PHA',1928,24.0,'George Pipgras','NYA',1928,24.0,'George Earnshaw','PHA',1929,24.0,'Lefty Grove','PHA',1930,28.0,'Wes Ferrell','CLE',1930,25.0,'Lefty Grove','PHA',1931,31.0,'General Crowder','WS1',1932,26.0,'Lefty Grove','PHA',1932,25.0,'Lefty Gomez','NYA',1932,24.0,'General Crowder','WS1',1933,24.0,'Lefty Grove','PHA',1933,24.0,'Dizzy Dean','SLN',1934,30.0,'Lefty Gomez','NYA',1934,26.0,'Schoolboy Rowe','DET',1934,24.0,'Dizzy Dean','SLN',1935,28.0,'Wes Ferrell','BOS',1935,25.0,'Carl Hubbell','NY1',1936,26.0,'Dizzy Dean','SLN',1936,24.0,'Bucky Walters','CIN',1939,27.0,'Paul Derringer','CIN',1939,25.0,'Bob Feller','CLE',1939,24.0,'Bob Feller','CLE',1940,27.0,'Bob Feller','CLE',1941,25.0,'Hal Newhouser','DET',1944,29.0,'Dizzy Trout','DET',1944,27.0,'Hal Newhouser','DET',1945,25.0,'Bob Feller','CLE',1946,26.0,'Hal Newhouser','DET',1946,26.0,'Dave Ferriss','BOS',1946,25.0,'Johnny Sain','BSN',1948,24.0,'Mel Parnell','BOS',1949,25.0,'Robin Roberts','PHI',1952,28.0,'Bobby Shantz','PHA',1952,24.0,'Don Newcombe','BRO',1956,27.0,'Whitey Ford','NYA',1961,25.0,'Don Drysdale','LAN',1962,25.0,'Jack Sanford','SFN',1962,24.0,'Sandy Koufax','LAN',1963,25.0,'Juan Marichal','SFN',1963,25.0,'Whitey Ford','NYA',1963,24.0,'Larry Jackson','CHN',1964,24.0,'Sandy Koufax','LAN',1965,26.0,'Tony Cloninger','ML1',1965,24.0,'Sandy Koufax','LAN',1966,27.0,'Jim Kaat','MIN',1966,25.0,'Juan Marichal','SFN',1966,25.0,'Denny McLain','DET',1968,31.0,'Juan Marichal','SFN',1968,26.0,'Tom Seaver','NYN',1969,25.0,'Denny McLain','DET',1969,24.0,'Mike Cuellar','BAL',1970,24.0,'Dave McNally','BAL',1970,24.0,'Jim Perry','MIN',1970,24.0,'Mickey Lolich','DET',1971,25.0,'Vida Blue','OAK',1971,24.0,'Fergie Jenkins','CHN',1971,24.0,'Steve Carlton','PHI',1972,27.0,'Gaylord Perry','CLE',1972,24.0,'Wilbur Wood','CHA',1972,24.0,'Ron Bryant','SFN',1973,24.0,'Wilbur Wood','CHA',1973,24.0,'Catfish Hunter','OAK',1974,25.0,'Fergie Jenkins','TEX',1974,25.0,'Ron Guidry','NYA',1978,25.0];</script>
+</head>
+  <body onload="createAnswers();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                                <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                              </button>
+                              <div class="dropdown-content" id="mlbDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                                <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                              </button>
+                              <div class="dropdown-content" id="ncaafDropdown">
+                                <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                                <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                              </div>
+                            </li>
+                        <li>
+                              <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                                <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                              </button>
+                              <div class="dropdown-content" id="nflDropdown">
+                                <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                              </div>
+                          </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                                <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                              </button>
+                              <div class="dropdown-content" id="olympicDropdown">
+                                <a href="../../olympics/map.html">Olympic Map</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                            <div class="12u" id='question_str'>
+                                What pitchers have the most Wins in one season 
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="6u">
+                                <input class="awesomplete" id="answer" placeholder="Answer" type="text"/>
+                            </div>
+
+                            <div class="6u">
+                                Points: <span id="points">0</span>
+                            </div>
+
+                    </div>
+                    <div class="row" id="answer_spot"></div>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../mlb/quiz-names/quiz-pitcher-14.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

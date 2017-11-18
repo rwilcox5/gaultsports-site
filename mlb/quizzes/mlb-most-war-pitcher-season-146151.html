@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+<script>var rawDataArray = ['Walter Johnson','WS1',1919,10.49,'Eddie Cicotte','CHA',1919,9.47,'Pete Alexander','CHN',1920,12.13,'Red Faber','CHA',1921,11.3,'Red Faber','CHA',1922,9.55,'Dolf Luque','CIN',1923,10.62,'Dazzy Vance','BRO',1924,10.45,'Dazzy Vance','BRO',1928,9.96,'Lefty Grove','PHA',1930,9.46,'Lefty Grove','PHA',1931,10.1,'Lefty Grove','PHA',1932,9.03,'Lefty Grove','BOS',1935,9.51,'Lefty Grove','BOS',1936,11.06,'Carl Hubbell','NY1',1936,9.63,'Lefty Grove','BOS',1937,9.59,'Lefty Gomez','NYA',1937,9.38,'Bob Feller','CLE',1939,9.29,'Bob Feller','CLE',1940,9.9,'Dizzy Trout','DET',1944,9.6,'Hal Newhouser','DET',1945,11.2,'Bob Feller','CLE',1946,9.95,'Hal Newhouser','DET',1946,9.5,'Ewell Blackwell','CIN',1947,9.5,'Warren Spahn','BSN',1947,9.46,'Harry Brecheen','SLN',1948,8.86,'Bobby Shantz','PHA',1952,9.1,'Robin Roberts','PHI',1953,9.8,'Warren Spahn','ML1',1953,8.86,'Robin Roberts','PHI',1954,9.04,'Sandy Koufax','LAN',1963,10.68,'Dick Ellsworth','CHN',1963,10.21,'Dean Chance','LAA',1964,9.31,'Juan Marichal','SFN',1965,10.31,'Sandy Koufax','LAN',1966,10.34,'Juan Marichal','SFN',1966,9.1,'Jim Bunning','PHI',1966,8.86,'Bob Gibson','SLN',1968,11.24,'Bob Gibson','SLN',1969,10.41,'Bob Gibson','SLN',1970,8.89,'Wilbur Wood','CHA',1971,11.66,'Fergie Jenkins','CHN',1971,10.29,'Tom Seaver','NYN',1971,10.15,'Vida Blue','OAK',1971,9.04,'Steve Carlton','PHI',1972,12.05,'Gaylord Perry','CLE',1972,10.98,'Wilbur Wood','CHA',1972,10.69,'Tom Seaver','NYN',1973,10.6,'Bert Blyleven','MIN',1973,9.87,'Jon Matlack','NYN',1974,9.05,'Mark Fidrych','DET',1976,9.62,'Rick Reuschel','CHN',1977,9.38,'Phil Niekro','ATL',1977,8.92,'Phil Niekro','ATL',1978,9.98,'Ron Guidry','NYA',1978,9.55,'Steve Carlton','PHI',1980,10.24,'Dwight Gooden','NYN',1985,12.15,'Teddy Higuera','ML4',1986,9.38,'Roger Clemens','BOS',1986,8.86,'Roger Clemens','BOS',1987,9.43,'Bret Saberhagen','KCA',1989,9.7,'Roger Clemens','BOS',1990,10.56,'Greg Maddux','CHN',1992,9.18,'Jose Rijo','CIN',1993,9.27,'Kevin Appier','KCA',1993,9.24,'Greg Maddux','ATL',1995,9.71,'Roger Clemens','TOR',1997,11.93,'Pedro Martinez','MON',1997,9.0,'Pedro Martinez','BOS',1999,9.69,'Randy Johnson','ARI',1999,9.24,'Pedro Martinez','BOS',2000,11.72,'Randy Johnson','ARI',2001,10.03,'Randy Johnson','ARI',2002,10.91,'Zack Greinke','KCA',2009,10.37,'Roy Halladay','PHI',2011,8.86,'Zack Greinke','LAN',2015,9.28];</script>
+</head>
+  <body onload="createAnswers();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                                <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                              </button>
+                              <div class="dropdown-content" id="mlbDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                                <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                              </button>
+                              <div class="dropdown-content" id="ncaafDropdown">
+                                <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                                <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                              </div>
+                            </li>
+                        <li>
+                              <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                                <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                              </button>
+                              <div class="dropdown-content" id="nflDropdown">
+                                <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                              </div>
+                          </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                                <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                              </button>
+                              <div class="dropdown-content" id="olympicDropdown">
+                                <a href="../../olympics/map.html">Olympic Map</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                            <div class="12u" id='question_str'>
+                                What pitchers have the most WAR in one season 
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="6u">
+                                <input class="awesomplete" id="answer" placeholder="Answer" type="text"/>
+                            </div>
+
+                            <div class="6u">
+                                Points: <span id="points">0</span>
+                            </div>
+
+                    </div>
+                    <div class="row" id="answer_spot"></div>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../mlb/quiz-names/quiz-pitcher-9.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>
