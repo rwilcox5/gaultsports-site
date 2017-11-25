@@ -1,0 +1,65 @@
+<!-- Banner -->
+                <section id="banner">
+                  <div class="row">
+                    <div class="6u 12u$(medium)">
+                      <header>
+                        <h1>Custom QB Ratings</h1>
+                        <p>You decide who the best quarterback is</p>
+                      </header>
+                      <p>Do you feel like passer ratings are arbitrary?</p>
+                      <p>What if you were the arbiter? Decide which characteristics to weight and find the real elite quarterbacks.</p>
+                      <p>Quarterback statistics from every game in NFL history are loaded in and ready for your analysis. Try to come up with a way to make your favorite quarterback the greatest. Or use boring default ratings to identify the best weeks, seasons, and careers of all-time.</p>
+
+                    </div>
+                    <div class="6u 12u$(medium)">
+                      <div class="row">
+                        <div class="3u">
+                          <input id="wRec" value=".25" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="wOpp" value=".50" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="wOppOpp" value=".25" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="hAdv" value=".4" type="text"></input>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="6u">
+                          <input id="nRows" value="10" type="text"></input>
+                        </div>
+                        <div class="6u">
+                          <select id="outputType">
+                            <option value="Table">Table</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Markdown">Markdown</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button class="button-primary" onclick="runRating();">Generate</button>
+                      <table id="rpiTable">
+                      </table>
+                      <div id="markdown_spot"><img class="xshide sshow" src="../assets/img/728x90.jpg" width="336" height="280"/><img class="shide xlshow" src="../assets/img/728x90.jpg" width="468" height="60"/><img class="xlhide" src="../assets/img/728x90.jpg" width="728" height="90"/></div>
+
+                    </div>
+
+                  </div>
+                </section>
+
+
+              
+
+            </div>
+          </div>
+
+        
+
+      </div>
+
+    <!-- Scripts -->
+
+      <script src="../assets/js/main.js"></script>
+      <script src="../ncaab/custom-NCAAB-rpi.js"></script>
+      <script src="../ncaab/custom-NCAAB-bracket.js"></script>

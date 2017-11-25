@@ -6,17 +6,14 @@
 -->
 <html>
   <head>
-    <title>Pitch Chart Visualizations by TripleLog - Sports and Data Analysis</title>
+    <title>Custom QB Ratings by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="icon" href="../assets/img/logo.png">
 
-  <link rel="stylesheet" href="../assets/css/awesomplete.css" />
-<script src="../mlb/load-pitch-charts.js"></script>
-<script src="../assets/js/awesomplete.js"></script>
-</head>
-  <body onload="setSelect();">
+  </head>
+  <body onload="">
 
     <!-- Wrapper -->
       <div id="wrapper">
@@ -107,85 +104,59 @@
                       </ul>
                     </div>
                   </div>
-                </header>
-                  <section class="banner">
-                    <div class="row">
-                      <div class="6u">
-                        
-                          <form>
-                          <div class="row">
+                </header><!-- Banner -->
+                <section id="banner">
+                  <div class="row">
+                    <div class="6u 12u$(medium)">
+                      <header>
+                        <h1>Custom QB Ratings</h1>
+                        <p>You decide who the best quarterback is</p>
+                      </header>
+                      <p>Do you feel like passer ratings are arbitrary?</p>
+                      <p>What if you were the arbiter? Decide which characteristics to weight and find the real elite quarterbacks.</p>
+                      <p>Quarterback statistics from every game in NFL history are loaded in and ready for your analysis. Try to come up with a way to make your favorite quarterback the greatest. Or use boring default ratings to identify the best weeks, seasons, and careers of all-time.</p>
 
-                            <div class="3u">
-                                <input class="awesomplete" id="pid" onchange="updateYear(this.value);" placeholder="Pitcher ID" type="text"/>
-                            </div>
-                            <div class="3u">
-                                <select id="year" onchange="updateMonth(this.value);">
-                                  <option value="0" disabled selected>Year</option>
-                                </select>
-                            </div>
-                            <div class="3u">
-                                <select id="month" onchange="updateDay(this.value);">
-                                  <option value="0" disabled selected>Month</option>
-                                </select>
-                            </div>
-                            <div class="3u">
-                                <select id="day">
-                                  <option value="0" disabled selected>Day</option>
-                                </select>
-                            </div>
-                          </div>  
-                          </form>
-                        
+                    </div>
+                    <div class="6u 12u$(medium)">
+                      <div class="row">
+                        <div class="3u">
+                          <input id="wRec" value=".25" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="wOpp" value=".50" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="wOppOpp" value=".25" type="text"></input>
+                        </div>
+                        <div class="3u">
+                          <input id="hAdv" value=".4" type="text"></input>
+                        </div>
                       </div>
+                      <div class="row">
+                        <div class="6u">
+                          <input id="nRows" value="10" type="text"></input>
+                        </div>
+                        <div class="6u">
+                          <select id="outputType">
+                            <option value="Table">Table</option>
+                            <option value="HTML">HTML</option>
+                            <option value="Markdown">Markdown</option>
+                          </select>
+                        </div>
+                      </div>
+                      <button class="button-primary" onclick="runRating();">Generate</button>
+                      <table id="rpiTable">
+                      </table>
+                      <div id="markdown_spot"><img class="xshide sshow" src="../assets/img/728x90.jpg" width="336" height="280"/><img class="shide xlshow" src="../assets/img/728x90.jpg" width="468" height="60"/><img class="xlhide" src="../assets/img/728x90.jpg" width="728" height="90"/></div>
 
-                      <div class="6u">
-                        <button class="button-primary" onclick="genRating();">Generate</button>
-                      </div>
                     </div>
-                    <div class="row">
-                      <div class="12u" style="text-align:center" id="matchup_data">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot1">
-                      </div>
-                      <div class="3u" id="canvas_spot2">
-                      </div>
-                      <div class="3u" id="canvas_spot3">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot4">
-                      </div>
-                      <div class="3u" id="canvas_spot5">
-                      </div>
-                      <div class="3u" id="canvas_spot6">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot7">
-                      </div>
-                      <div class="3u" id="canvas_spot8">
-                      </div>
-                      <div class="3u" id="canvas_spot9">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                  </section>
+
+                  </div>
+                </section>
+
+
+              
+
             </div>
           </div>
 
@@ -196,16 +167,7 @@
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
-      <script src="../assets/js/gifjs/b64.js"></script>
-      <script src="../assets/js/gifjs/LZWEncoder.js"></script>
-      <script src="../assets/js/gifjs/NeuQuant.js"></script>
-      <script src="../assets/js/gifjs/GIFEncoder.js"></script>
-
-      <script src="../charts/pitch-chart.js"></script>
-      <script src="../mlb/pitch-charts.js"></script>
-
-
-
+      <script src="../ncaab/custom-NCAAB-rpi.js"></script>
   <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../privacy.html">Privacy Policy</a>&nbsp;<a href="../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
   </body>
 </html>

@@ -7,4 +7,6 @@ python createhtml.py --title "Olympic Weighted Medal Rankings by TripleLog - Spo
 python createhtml.py --title "TripleLog - Sports and Data Analysis" --onload "getPoll(10)" "getRecs(10)" --base base/index-base.html --output index.html
 python createhtml.py --title "Quizzes to Test Your Sports Knowledge by TripleLog - Sports and Data Analysis" --base mlb/base/create-mlb-quiz-base.html --output mlb/create-mlb-quiz.html
 python createhtml.py --title "Parlay Advantages by TripleLog - Sports and Data Analysis" --base nfl/future/nfl-parlays-base.html --output nfl/nfl-parlays.html
+python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-rpi-base.html --output ncaab/custom-NCAAB-rpi.html
+
 
