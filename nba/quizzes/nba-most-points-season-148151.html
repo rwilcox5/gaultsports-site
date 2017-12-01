@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+<script>var rawDataArray = ['Elvin Hayes*','SDR',1969,2327.0,'Earl Monroe*','BAL',1969,2065.0,'Billy Cunningham*','PHI',1969,2034.0,'Bob Rule','SEA',1969,1965.0,'Oscar Robertson*','CIN',1969,1955.0,'Gail Goodrich*','PHO',1969,1931.0,'Hal Greer*','PHI',1969,1896.0,'Elgin Baylor*','LAL',1969,1881.0,'Kareem Abdul-Jabbar*','MIL',1970,2361.0,'Jerry West*','LAL',1970,2309.0,'Elvin Hayes*','SDR',1970,2256.0,'Billy Cunningham*','PHI',1970,2114.0,'Lou Hudson','ATL',1970,2031.0,'Connie Hawkins*','PHO',1970,1995.0,'Bob Rule','SEA',1970,1965.0,'John Havlicek*','BOS',1970,1960.0,'Earl Monroe*','BAL',1970,1922.0,'Kareem Abdul-Jabbar*','MIL',1971,2596.0,'Elvin Hayes*','SDR',1971,2350.0,'John Havlicek*','BOS',1971,2338.0,'Dave Bing*','DET',1971,2213.0,'Bob Love','CHI',1971,2043.0,'Lou Hudson','ATL',1971,2039.0,'Geoff Petrie','POR',1971,2031.0,'Pete Maravich*','ATL',1971,1880.0,'Tom Van','CIN',1971,1875.0,'Billy Cunningham*','PHI',1971,1859.0,'Jerry West*','LAL',1971,1859.0,'Kareem Abdul-Jabbar*','MIL',1972,2822.0,'John Havlicek*','BOS',1972,2252.0,'Tiny Archibald*','CIN',1972,2145.0,'Gail Goodrich*','LAL',1972,2127.0,'Elvin Hayes*','HOU',1972,2063.0,'Bob Lanier*','DET',1972,2056.0,'Bob Love','CHI',1972,2037.0,'Sidney Wicks','POR',1972,2009.0,'Jerry West*','LAL',1972,1985.0,'Archie Clark','TOT',1972,1938.0,'Spencer Haywood*','SEA',1972,1914.0,'Archie Clark','BAL',1972,1909.0,'Lou Hudson','ATL',1972,1899.0,'Tiny Archibald*','KCO',1973,2719.0,'Kareem Abdul-Jabbar*','MIL',1973,2292.0,'Spencer Haywood*','SEA',1973,2251.0,'Pete Maravich*','ATL',1973,2063.0,'Charlie Scott','PHO',1973,2048.0,'Lou Hudson','ATL',1973,2029.0,'Geoff Petrie','POR',1973,1970.0,'Bob Lanier*','DET',1973,1927.0,'Sidney Wicks','POR',1973,1906.0,'John Havlicek*','BOS',1973,1902.0,'Bob Love','CHI',1973,1895.0,'Dave Bing*','DET',1973,1840.0,'Bob McAdoo*','BUF',1974,2261.0,'Kareem Abdul-Jabbar*','MIL',1974,2191.0,'Pete Maravich*','ATL',1974,2107.0,'Gail Goodrich*','LAL',1974,2076.0,'Rick Barry*','GSW',1974,2009.0,'Rudy Tomjanovich','HOU',1974,1961.0,'Bob McAdoo*','BUF',1975,2831.0,'Rick Barry*','GSW',1975,2450.0,'Tiny Archibald*','KCO',1975,2170.0,'Kareem Abdul-Jabbar*','MIL',1975,1949.0,'Elvin Hayes*','WSB',1975,1887.0,'Bob McAdoo*','BUF',1976,2427.0,'Kareem Abdul-Jabbar*','LAL',1976,2275.0,'Tiny Archibald*','KCK',1976,1935.0,'Pete Maravich*','NOJ',1977,2273.0,'Kareem Abdul-Jabbar*','LAL',1977,2152.0,'David Thompson*','DEN',1977,2125.0,'Billy Knight','IND',1977,2075.0,'Elvin Hayes*','WSB',1977,1942.0,'George Gervin*','SAS',1977,1895.0,'Bob McAdoo*','TOT',1977,1861.0,'George Gervin*','SAS',1978,2232.0,'David Thompson*','DEN',1978,2172.0,'Bob McAdoo*','NYK',1978,2097.0,'Randy Smith','BUF',1978,2021.0,'Paul Westphal','PHO',1978,2014.0,'Walter Davis','PHO',1978,1959.0,'Calvin Murphy*','HOU',1978,1949.0,'Bernard King*','NJN',1978,1909.0,'Rick Barry*','GSW',1978,1898.0,'Artis Gilmore*','CHI',1978,1879.0,'Truck Robinson','NOJ',1978,1862.0,'George Gervin*','SAS',1979,2365.0,'World B.','SDC',1979,2244.0,'Moses Malone*','HOU',1979,2031.0,'Marques Johnson','MIL',1979,1972.0,'Paul Westphal','PHO',1979,1941.0,'Artis Gilmore*','CHI',1979,1940.0,'Kareem Abdul-Jabbar*','LAL',1979,1903.0,'Walter Davis','PHO',1979,1868.0,'George Gervin*','SAS',1980,2585.0,'Moses Malone*','HOU',1980,2119.0,'Julius Erving*','PHI',1980,2100.0,'World B.','SDC',1980,2055.0,'Kareem Abdul-Jabbar*','LAL',1980,2034.0,'Dan Issel*','DEN',1980,1951.0,'Adrian Dantley*','UTA',1980,1903.0,'Elvin Hayes*','WSB',1980,1859.0,'Otis Birdsong','KCK',1980,1858.0,'Adrian Dantley*','UTA',1981,2452.0,'Moses Malone*','HOU',1981,2222.0,'George Gervin*','SAS',1981,2221.0,'Kareem Abdul-Jabbar*','LAL',1981,2095.0,'Julius Erving*','PHI',1981,2014.0,'Mike Mitchell','CLE',1981,2012.0,'David Thompson*','DEN',1981,1967.0,'Alex English*','DEN',1981,1929.0,'George Gervin*','SAS',1982,2551.0,'Moses Malone*','HOU',1982,2520.0,'Adrian Dantley*','UTA',1982,2457.0,'Alex English*','DEN',1982,2082.0,'Julius Erving*','PHI',1982,1974.0,'Gus Williams','SEA',1982,1875.0,'Dan Issel*','DEN',1982,1852.0,'Alex English*','DEN',1983,2326.0,'Kiki Vandeweghe','DEN',1983,2186.0,'George Gervin*','SAS',1983,2043.0,'Mark Aguirre','DAL',1983,1979.0,'Reggie Theus','CHI',1983,1953.0,'Moses Malone*','PHI',1983,1908.0,'Joe Barry','GSW',1983,1907.0,'Larry Bird*','BOS',1983,1867.0,'Isiah Thomas*','DET',1983,1854.0,'Adrian Dantley*','UTA',1984,2418.0,'Mark Aguirre','DAL',1984,2330.0,'Kiki Vandeweghe','DEN',1984,2295.0,'Alex English*','DEN',1984,2167.0,'Bernard King*','NYK',1984,2027.0,'George Gervin*','SAS',1984,1967.0,'Larry Bird*','BOS',1984,1908.0,'Terry Cummings','SDC',1984,1854.0,'Michael Jordan*','CHI',1985,2313.0,'Larry Bird*','BOS',1985,2295.0,'Alex English*','DEN',1985,2262.0,'Dominique Wilkins*','ATL',1985,2217.0,'Purvis Short','GSW',1985,2186.0,'Mark Aguirre','DAL',1985,2055.0,'Moses Malone*','PHI',1985,1941.0,'Eddie Johnson','KCK',1985,1876.0,'Terry Cummings','MIL',1985,1861.0,'Alex English*','DEN',1986,2414.0,'Dominique Wilkins*','ATL',1986,2366.0,'Adrian Dantley*','UTA',1986,2267.0,'Larry Bird*','BOS',1986,2115.0,'Kiki Vandeweghe','POR',1986,1962.0,'Mike Mitchell','SAS',1986,1921.0,'Kareem Abdul-Jabbar*','LAL',1986,1846.0,'Michael Jordan*','CHI',1987,3041.0,'Alex English*','DEN',1987,2345.0,'Dominique Wilkins*','ATL',1987,2294.0,'Kiki Vandeweghe','POR',1987,2122.0,'Larry Bird*','BOS',1987,2076.0,'Mark Aguirre','DAL',1987,2056.0,'Dale Ellis','SEA',1987,2041.0,'Kevin McHale*','BOS',1987,2008.0,'Tom Chambers','SEA',1987,1909.0,'Magic Johnson*','LAL',1987,1909.0,'Xavier McDaniel','SEA',1987,1890.0,'Ron Harper','CLE',1987,1874.0,'Walter Davis','PHO',1987,1867.0,'Michael Jordan*','CHI',1988,2868.0,'Dominique Wilkins*','ATL',1988,2397.0,'Larry Bird*','BOS',1988,2275.0,'Karl Malone*','UTA',1988,2268.0,'Charles Barkley*','PHI',1988,2264.0,'Clyde Drexler*','POR',1988,2185.0,'Alex English*','DEN',1988,2000.0,'Dale Ellis','SEA',1988,1938.0,'Mark Aguirre','DAL',1988,1932.0,'Michael Jordan*','CHI',1989,2633.0,'Karl Malone*','UTA',1989,2326.0,'Dale Ellis','SEA',1989,2253.0,'Chris Mullin*','GSW',1989,2176.0,'Alex English*','DEN',1989,2175.0,'Clyde Drexler*','POR',1989,2123.0,'Dominique Wilkins*','ATL',1989,2099.0,'Tom Chambers','PHO',1989,2085.0,'Charles Barkley*','PHI',1989,2037.0,'Hakeem Olajuwon*','HOU',1989,2034.0,'Michael Jordan*','CHI',1990,2753.0,'Karl Malone*','UTA',1990,2540.0,'Patrick Ewing*','NYK',1990,2347.0,'Tom Chambers','PHO',1990,2201.0,'Dominique Wilkins*','ATL',1990,2138.0,'Reggie Miller*','IND',1990,2016.0,'Hakeem Olajuwon*','HOU',1990,1995.0,'David Robinson*','SAS',1990,1993.0,'Charles Barkley*','PHI',1990,1989.0,'Chris Mullin*','GSW',1990,1956.0,'Tony Campbell','MIN',1990,1903.0,'Michael Jordan*','CHI',1991,2580.0,'Karl Malone*','UTA',1991,2382.0,'Patrick Ewing*','NYK',1991,2154.0,'Chris Mullin*','GSW',1991,2107.0,'David Robinson*','SAS',1991,2101.0,'Dominique Wilkins*','ATL',1991,2101.0,'Tim Hardaway','GSW',1991,1881.0,'Reggie Miller*','IND',1991,1855.0,'Charles Barkley*','PHI',1991,1849.0,'Mitch Richmond*','GSW',1991,1840.0,'Michael Jordan*','CHI',1992,2404.0,'Karl Malone*','UTA',1992,2272.0,'Chris Mullin*','GSW',1992,2074.0,'Patrick Ewing*','NYK',1992,1970.0,'Clyde Drexler*','POR',1992,1903.0,'Tim Hardaway','GSW',1992,1893.0,'Michael Jordan*','CHI',1993,2541.0,'Karl Malone*','UTA',1993,2217.0,'Hakeem Olajuwon*','HOU',1993,2140.0,'Dominique Wilkins*','ATL',1993,2121.0,'Patrick Ewing*','NYK',1993,1959.0,'Charles Barkley*','PHO',1993,1944.0,'David Robinson*','SAS',1993,1916.0,'Shaquille O\'Neal*','ORL',1993,1893.0,'David Robinson*','SAS',1994,2383.0,'Shaquille O\'Neal*','ORL',1994,2377.0,'Hakeem Olajuwon*','HOU',1994,2184.0,'Karl Malone*','UTA',1994,2063.0,'Patrick Ewing*','NYK',1994,1939.0,'Dominique Wilkins*','TOT',1994,1923.0,'Shaquille O\'Neal*','ORL',1995,2315.0,'David Robinson*','SAS',1995,2238.0,'Karl Malone*','UTA',1995,2187.0,'Hakeem Olajuwon*','HOU',1995,2005.0,'Jamal Mashburn','DAL',1995,1926.0,'Patrick Ewing*','NYK',1995,1886.0,'Mitch Richmond*','SAC',1995,1867.0,'Michael Jordan*','CHI',1996,2491.0,'Karl Malone*','UTA',1996,2106.0,'David Robinson*','SAS',1996,2051.0,'Hakeem Olajuwon*','HOU',1996,1936.0,'Mitch Richmond*','SAC',1996,1872.0,'Michael Jordan*','CHI',1997,2431.0,'Karl Malone*','UTA',1997,2249.0,'Glen Rice','CHH',1997,2115.0,'Mitch Richmond*','SAC',1997,2095.0,'Latrell Sprewell','GSW',1997,1938.0,'Michael Jordan*','CHI',1998,2357.0,'Karl Malone*','UTA',1998,2190.0,'Antoine Walker','BOS',1998,1840.0,'Shaquille O\'Neal*','LAL',2000,2344.0,'Vince Carter','TOR',2000,2107.0,'Karl Malone*','UTA',2000,2095.0,'Allen Iverson*','PHI',2000,1989.0,'Gary Payton*','SEA',2000,1982.0,'Jerry Stackhouse','DET',2000,1939.0,'Grant Hill','DET',2000,1906.0,'Kevin Garnett','MIN',2000,1857.0,'Michael Finley','DAL',2000,1855.0,'Jerry Stackhouse','DET',2001,2380.0,'Allen Iverson*','PHI',2001,2207.0,'Shaquille O\'Neal*','LAL',2001,2125.0,'Paul Pierce','BOS',2001,2071.0,'Vince Carter','TOR',2001,2070.0,'Tracy McGrady','ORL',2001,2065.0,'Antawn Jamison','GSW',2001,2044.0,'Kobe Bryant','LAL',2001,1938.0,'Chris Webber','SAC',2001,1898.0,'Antoine Walker','BOS',2001,1892.0,'Karl Malone*','UTA',2001,1878.0,'Paul Pierce','BOS',2002,2144.0,'Tim Duncan','SAS',2002,2089.0,'Kobe Bryant','LAL',2002,2019.0,'Tracy McGrady','ORL',2002,1948.0,'Allen Iverson*','PHI',2002,1883.0,'Kobe Bryant','LAL',2003,2461.0,'Tracy McGrady','ORL',2003,2407.0,'Allen Iverson*','PHI',2003,2262.0,'Paul Pierce','BOS',2003,2048.0,'Dirk Nowitzki','DAL',2003,2011.0,'Tim Duncan','SAS',2003,1884.0,'Kevin Garnett','MIN',2003,1883.0,'Allan Houston','NYK',2003,1845.0,'Shaquille O\'Neal*','LAL',2003,1841.0,'Kevin Garnett','MIN',2004,1987.0,'Peja Stojakovic','SAC',2004,1964.0,'Tracy McGrady','ORL',2004,1878.0,'Allen Iverson*','PHI',2005,2302.0,'LeBron James','CLE',2005,2175.0,'Amar\'e Stoudemire','PHO',2005,2080.0,'Gilbert Arenas','WAS',2005,2038.0,'Dirk Nowitzki','DAL',2005,2032.0,'Tracy McGrady','HOU',2005,2003.0,'Vince Carter','TOT',2005,1886.0,'Ray Allen','SEA',2005,1867.0,'Dwyane Wade','MIA',2005,1854.0,'Kobe Bryant','LAL',2006,2832.0,'LeBron James','CLE',2006,2478.0,'Allen Iverson*','PHI',2006,2377.0,'Gilbert Arenas','WAS',2006,2346.0,'Dirk Nowitzki','DAL',2006,2151.0,'Carmelo Anthony','DEN',2006,2122.0,'Paul Pierce','BOS',2006,2116.0,'Dwyane Wade','MIA',2006,2040.0,'Michael Redd','MIL',2006,2028.0,'Ray Allen','SEA',2006,1955.0,'Elton Brand','LAC',2006,1953.0,'Vince Carter','NJN',2006,1911.0,'Kobe Bryant','LAL',2007,2430.0,'LeBron James','CLE',2007,2132.0,'Gilbert Arenas','WAS',2007,2105.0,'Vince Carter','NJN',2007,2070.0,'Dirk Nowitzki','DAL',2007,1916.0,'Carmelo Anthony','DEN',2007,1881.0,'Kobe Bryant','LAL',2008,2323.0,'LeBron James','CLE',2008,2250.0,'Allen Iverson*','DEN',2008,2164.0,'Amar\'e Stoudemire','PHO',2008,1989.0,'Carmelo Anthony','DEN',2008,1978.0,'Richard Jefferson','NJN',2008,1857.0,'Dwyane Wade','MIA',2009,2386.0,'LeBron James','CLE',2009,2304.0,'Kobe Bryant','LAL',2009,2201.0,'Dirk Nowitzki','DAL',2009,2094.0,'Kevin Durant','OKC',2009,1871.0,'Kevin Durant','OKC',2010,2472.0,'LeBron James','CLE',2010,2258.0,'Dwyane Wade','MIA',2010,2045.0,'Dirk Nowitzki','DAL',2010,2027.0,'Kobe Bryant','LAL',2010,1970.0,'Carmelo Anthony','DEN',2010,1943.0,'Amar\'e Stoudemire','PHO',2010,1896.0,'Kevin Durant','OKC',2011,2161.0,'LeBron James','MIA',2011,2111.0,'Kobe Bryant','LAL',2011,2078.0,'Derrick Rose','CHI',2011,2026.0,'Amar\'e Stoudemire','NYK',2011,1971.0,'Carmelo Anthony','TOT',2011,1970.0,'Dwyane Wade','MIA',2011,1941.0,'Monta Ellis','GSW',2011,1929.0,'Kevin Martin','HOU',2011,1876.0,'Blake Griffin','LAC',2011,1845.0,'Kevin Durant','OKC',2012,1850.0,'Kevin Durant','OKC',2013,2280.0,'Kobe Bryant','LAL',2013,2133.0,'LeBron James','MIA',2013,2036.0,'James Harden','HOU',2013,2023.0,'Carmelo Anthony','NYK',2013,1920.0,'Russell Westbrook','OKC',2013,1903.0,'Kevin Durant','OKC',2014,2593.0,'Carmelo Anthony','NYK',2014,2112.0,'LeBron James','MIA',2014,2089.0,'Kevin Love','MIN',2014,2010.0,'Blake Griffin','LAC',2014,1930.0,'Stephen Curry','GSW',2014,1873.0,'James Harden','HOU',2014,1851.0,'James Harden','HOU',2015,2217.0,'Stephen Curry','GSW',2015,1900.0,'Russell Westbrook','OKC',2015,1886.0,'James Harden','HOU',2016,2376.0,'Stephen Curry','GSW',2016,2375.0,'Kevin Durant','OKC',2016,2029.0,'LeBron James','CLE',2016,1920.0,'Damian Lillard','POR',2016,1879.0,'Russell Westbrook','OKC',2016,1878.0,'Paul George','IND',2016,1874.0,'Russell Westbrook','OKC',2017,2558.0,'James Harden','HOU',2017,2356.0,'Isaiah Thomas','BOS',2017,2199.0,'Anthony Davis','NOP',2017,2099.0,'Karl-Anthony Towns','MIN',2017,2061.0,'Damian Lillard','POR',2017,2024.0,'DeMar DeRozan','TOR',2017,2020.0,'Stephen Curry','GSW',2017,1999.0,'LeBron James','CLE',2017,1954.0,'DeMarcus Cousins','TOT',2017,1942.0,'Andrew Wiggins','MIN',2017,1933.0,'Kawhi Leonard','SAS',2017,1888.0];</script>
+</head>
+  <body onload="createAnswers();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="../../mlb/create-mlb-quiz.html">Leader Quizzes</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaab" onclick="myFunction('ncaabDropdown');">NCAAB
+                            <img src="../../assets/img/down.png" width="13px" class="dropncaab drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaabDropdown">
+                            <a href="../../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
+                            <a href="../../ncaab/custom-NCAAB-rpi.html">DAB</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                            <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="../../olympics/map.html">Olympic Map</a>
+                          </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                            <div class="12u" id='question_str'>
+                                What pitchers have the most Points in one season 
+                            </div>
+                          </div>  
+                          <div class="row">
+                            <div class="6u">
+                                <input class="awesomplete" id="answer" placeholder="Answer" type="text"/>
+                            </div>
+
+                            <div class="6u">
+                                Points: <span id="points">0</span>
+                            </div>
+
+                    </div>
+                    <div class="row" id="answer_spot"></div>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../nba/quiz-names/quiz-bball-9.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

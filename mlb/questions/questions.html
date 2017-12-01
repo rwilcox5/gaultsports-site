@@ -1,0 +1,143 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../../assets/css/main.css" />
+    <link rel="icon" href="../../assets/img/logo.png">
+
+  <script src="../../assets/js/awesomplete.js"></script>
+<link rel="stylesheet" href="../../assets/css/awesomplete.css" />
+</head>
+  <body onload="createQuestions();">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../../index.html" class="logo"><img src="../../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="../../assets/img/down.png" width="13px" class="dropmlb drop" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="../../mlb/create-mlb-quiz.html">Leader Quizzes</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaaf" onclick="myFunction('ncaafDropdown');">NCAAF
+                            <img src="../../assets/img/down.png" width="13px" class="dropncaaf drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaafDropdown">
+                            <a href="../../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="../../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropnfl" onclick="myFunction('nflDropdown');">NFL
+                            <img src="../../assets/img/down.png" width="13px" class="dropnfl drop" >
+                          </button>
+                          <div class="dropdown-content" id="nflDropdown">
+                            <a href="../../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaab" onclick="myFunction('ncaabDropdown');">NCAAB
+                            <img src="../../assets/img/down.png" width="13px" class="dropncaab drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaabDropdown">
+                            <a href="../../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
+                            <a href="../../ncaab/custom-NCAAB-rpi.html">DAB</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropolympic" onclick="myFunction('olympicDropdown');">Other
+                            <img src="../../assets/img/down.png" width="13px" class="dropolympic drop" >
+                          </button>
+                          <div class="dropdown-content" id="olympicDropdown">
+                            <a href="../../olympics/map.html">Olympic Map</a>
+                          </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                           <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="8u 9u$(large) 12u$(medium)">
+                    <div class="row">
+
+                      <div class="12u" id='question_str'>
+                          Who Am I?
+                      </div>
+                    </div>  
+                    <div class="row">
+                      <div class="12u">
+                          <input class="awesomplete" id="question" placeholder="Question" type="text"/>
+                      </div>
+
+                    </div>
+                    <table id="answer_spot"></table>
+                  </div>
+                
+                <div class="2u lhide"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../../assets/js/main.js"></script>
+      <script src="../../mlb/questions/questions.js"></script>
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../../privacy.html">Privacy Policy</a>&nbsp;<a href="../../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

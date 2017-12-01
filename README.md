@@ -1,5 +1,5 @@
-# gaultsports-site
-The website for Gault Sports
+# TripleLog
+The website for TripleLog
 
 Plugins Used:
 antimatter15 jsgif
