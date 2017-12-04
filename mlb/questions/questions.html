@@ -13,6 +13,7 @@
     <link rel="icon" href="../../assets/img/logo.png">
 
   <script src="../../assets/js/awesomplete.js"></script>
+<script src="load-answers.js"></script>
 <link rel="stylesheet" href="../../assets/css/awesomplete.css" />
 </head>
   <body onload="createQuestions();">
@@ -116,7 +117,7 @@
                     </div>  
                     <div class="row">
                       <div class="12u">
-                          <input class="awesomplete" id="question" placeholder="Question" type="text"/>
+                          <input class="awesomplete" id="question" placeholder="Question" type="text" onkeypress="setQuestion(event)"/>
                       </div>
 
                     </div>
@@ -135,6 +136,7 @@
 
       <script src="../../assets/js/main.js"></script>
       <script src="../../mlb/questions/questions.js"></script>
+      <script src="../../mlb/questions/answers/answers.js"></script>
 
 
 

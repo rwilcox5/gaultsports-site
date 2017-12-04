@@ -25,7 +25,7 @@ f = open('base/header.html','r')
 filedata = f.read()
 f.close()
 newdata = filedata.replace("<title></title>","<title>"+title+"</title>")
-newdata = newdata.replace("</head>",'<script src="../assets/js/awesomplete.js"></script>\n</head>')
+newdata = newdata.replace("</head>",'<script src="../assets/js/awesomplete.js"></script>\n<script src="load-answers.js"></script>\n</head>')
 if style is not None:
 	for i in style:
 		newdata = newdata.replace("</head>",'<link rel="stylesheet" href="'+i+'" />\n</head>')
