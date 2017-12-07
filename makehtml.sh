@@ -9,5 +9,6 @@ python createhtml.py --title "Quizzes to Test Your Sports Knowledge by TripleLog
 python createhtml.py --title "Parlay Advantages by TripleLog - Sports and Data Analysis" --base nfl/future/nfl-parlays-base.html --output nfl/nfl-parlays.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-rpi-base.html --output ncaab/custom-NCAAB-rpi.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-bracket-base.html --output ncaab/custom-NCAAB-bracket.html
+python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/solitaire.css --base nhl/base/solitaire-base.html --output nhl/solitaire.html
 
 
