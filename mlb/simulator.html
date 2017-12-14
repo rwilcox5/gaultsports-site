@@ -1,0 +1,607 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Custom QB Ratings by TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/img/logo.png">
+
+  </head>
+  <body onload="">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../index.html" class="logo"><img src="../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="../assets/img/down.png" width="13px" class="dropmlb drop" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
+                            <a href="../mlb/questions.html">20 Questions<sup>&beta;</sup></a>
+                            <a href="../mlb/questions.html">Simulator<sup>&beta;</sup></a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn droppro" onclick="myFunction('proDropdown');">Pro
+                            <img src="../assets/img/down.png" width="13px" class="droppro drop" >
+                          </button>
+                          <div class="dropdown-content" id="proDropdown">
+                            <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="../nba/create-nba-quiz.html">NBA Quizzes</a>
+                            <a href="../nba/custom-QB-rating.html">NBA Pt. Spread</a>
+                            <a href="../nhl/solitaire.html">NHL Solitaire</a>
+                            
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaa" onclick="myFunction('ncaaDropdown');">Amateur
+                            <img src="../assets/img/down.png" width="13px" class="dropncaa drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaaDropdown">
+                            <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                            <a href="../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
+                            <a href="../ncaab/custom-NCAAB-rpi.html">BYOBracketologist</a>
+                            <a href="../ncaab/custom-NCAAB-rpi.html">DAB</a>
+                            <a href="../olympics/map.html">Olympic Map</a>
+                          </div>
+                        </li>
+
+                        <li><a href="#" class="social-icon"><img src="../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropfullmenu" onclick="myFunction('fullmenuDropdown');">Menu
+                                <img src="../assets/img/down.png" width="13px" class="dropfullmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="fullmenuDropdown">
+                                <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">
+                    
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            1.
+                          </div>
+                          <div class="1u" id="salary1">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name1" placeholder="Name" type="text" onchange="updateSalary(1);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position1">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb1" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr1" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k1" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b1" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b1" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b1" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            2.
+                          </div>
+                          <div class="1u" id="salary2">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name2" placeholder="Name" type="text" onchange="updateSalary(2);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position2">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb2" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr2" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k2" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b2" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b2" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b2" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            3.
+                          </div>
+                          <div class="1u" id="salary3">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name3" placeholder="Name" type="text" onchange="updateSalary(3);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position3">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb3" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr3" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k3" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b3" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b3" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b3" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            4.
+                          </div>
+                          <div class="1u" id="salary4">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name2" placeholder="Name" type="text" onchange="updateSalary(4);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position4">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb4" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr4" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k4" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b4" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b4" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b4" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            5.
+                          </div>
+                          <div class="1u" id="salary5">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name2" placeholder="Name" type="text" onchange="updateSalary(5);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position5">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb5" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr5" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k5" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b5" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b5" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b5" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            6.
+                          </div>
+                          <div class="1u" id="salary6">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name2" placeholder="Name" type="text" onchange="updateSalary(6);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position6">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb6" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr6" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k6" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b6" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b6" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b6" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            7.
+                          </div>
+                          <div class="1u" id="salary7">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name7" placeholder="Name" type="text" onchange="updateSalary(7);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position7">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb7" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr7" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k7" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b7" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b7" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b7" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            8.
+                          </div>
+                          <div class="1u" id="salary8">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name8" placeholder="Name" type="text" onchange="updateSalary(8);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position8">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb8" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr8" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k8" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b8" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b8" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b8" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="8u">
+                        <div class="row">
+                          <div class="1u">
+                            9.
+                          </div>
+                          <div class="1u" id="salary9">
+                            10.34
+                          </div>
+                          <div class="6u">
+                            <input id="name9" placeholder="Name" type="text" onchange="updateSalary(9);"/>
+                          </div>
+                          <div class="4u">
+                            <select id="position9">
+                              <option value="2" selected>Catcher</option>
+                              <option value="3" selected>First Base</option>
+                              <option value="4" selected>Second Base</option>
+                              <option value="6" selected>Shortstop</option>
+                              <option value="5" selected>Third Base</option>
+                              <option value="7" selected>Left Fielder</option>
+                              <option value="8" selected>Center Fielder</option>
+                              <option value="9" selected>Right Fielder</option>
+                              <option value="0" selected>Designated Hitter</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <div class="row">
+                          <div class="4u">
+                            <input id="bb9" value=".1" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="hr9" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="k9" value="0" type="text"/>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <input id="1b9" value=".15" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="2b9" value=".05" type="text"/>
+                          </div>
+                          <div class="4u">
+                            <input id="3b9" value=".01" type="text"/>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <button class="button-primary" onclick="simSeason();">Sim Games</button>
+                    </div>
+                    
+
+
+                    
+                  </div>
+                
+                <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div><div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../assets/js/main.js"></script>
+      <script src="../mlb/simulator/simulator.js"></script>
+
+
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../privacy.html">Privacy Policy</a>&nbsp;<a href="../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

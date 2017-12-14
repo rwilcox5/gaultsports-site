@@ -1,0 +1,51 @@
+
+                  show-ad-left
+                    <div class="row">
+
+                        <div style="width:800px;float:left;">
+
+                          <canvas id="map_canvas" width="800" height="580" style="position:relative;">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="3u">
+                          <input id="start_year_born" value="1920" type="text" onchange="updateYears(true);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="end_year_born" value="2000" type="text" onchange="updateYears(true);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="start_year" value="1950" type="text" onchange="updateYears(false);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="end_year" value="1960" type="text" onchange="updateYears(false);"/>
+                      </div>
+                      <div class="6u">
+                          <div id="slider_born"></div>
+                      </div>
+                      <div class="6u">
+                          <div id="slider_play"></div>
+                      </div>
+                      
+                    </div>
+                  </div>
+                
+                show-ad-right
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../assets/js/main.js"></script>
+      <script type="text/javascript" src="../assets/js/nouislider.min.js">   </script>
+      <script type="text/javascript" src="../birthplaces/mlbdata.js">   </script>
+      <script type="text/javascript" src="../birthplaces/createdata.js">   </script>
+      <script type="text/javascript" src="../birthplaces/MapConfig.js"> </script>
+      <script type="text/javascript" src="../birthplaces/Map.js">   </script>
+
+

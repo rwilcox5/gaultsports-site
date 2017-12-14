@@ -6,17 +6,15 @@
 -->
 <html>
   <head>
-    <title>Pitch Chart Visualizations by TripleLog - Sports and Data Analysis</title>
+    <title>Custom QB Ratings by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="icon" href="../assets/img/logo.png">
 
-  <link rel="stylesheet" href="../assets/css/awesomplete.css" />
-<script src="../mlb/load-pitch-charts.js"></script>
-<script src="../assets/js/awesomplete.js"></script>
+  <link rel="stylesheet" href="../assets/css/nouislider.min.css" />
 </head>
-  <body onload="setSelect();">
+  <body onload="map_main();">
 
     <!-- Wrapper -->
       <div id="wrapper">
@@ -102,101 +100,54 @@
                     </div>
                   </div>
                 </header>
-                  <section class="banner">
+                  <div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">
                     <div class="row">
-                      <div class="6u">
-                        
-                          <form>
-                          <div class="row">
 
-                            <div class="3u">
-                                <input class="awesomplete" id="pid" onchange="updateYear(this.value);" placeholder="Pitcher ID" type="text"/>
-                            </div>
-                            <div class="3u">
-                                <select id="year" onchange="updateMonth(this.value);">
-                                  <option value="0" disabled selected>Year</option>
-                                </select>
-                            </div>
-                            <div class="3u">
-                                <select id="month" onchange="updateDay(this.value);">
-                                  <option value="0" disabled selected>Month</option>
-                                </select>
-                            </div>
-                            <div class="3u">
-                                <select id="day">
-                                  <option value="0" disabled selected>Day</option>
-                                </select>
-                            </div>
-                          </div>  
-                          </form>
-                        
-                      </div>
+                        <div style="width:800px;float:left;">
 
+                          <canvas id="map_canvas" width="800" height="580" style="position:relative;">
+                        </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="3u">
+                          <input id="start_year_born" value="1920" type="text" onchange="updateYears(true);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="end_year_born" value="2000" type="text" onchange="updateYears(true);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="start_year" value="1800" type="text" onchange="updateYears(false);"/>
+                      </div>
+                      <div class="3u">
+                          <input id="end_year" value="2017" type="text" onchange="updateYears(false);"/>
+                      </div>
                       <div class="6u">
-                        <button class="button-primary" onclick="genRating();">Generate</button>
+                          <div id="slider_born"></div>
                       </div>
+                      <div class="6u">
+                          <div id="slider_play"></div>
+                      </div>
+                      
                     </div>
-                    <div class="row">
-                      <div class="12u" style="text-align:center" id="matchup_data">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot1">
-                      </div>
-                      <div class="3u" id="canvas_spot2">
-                      </div>
-                      <div class="3u" id="canvas_spot3">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot4">
-                      </div>
-                      <div class="3u" id="canvas_spot5">
-                      </div>
-                      <div class="3u" id="canvas_spot6">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="3u" id="canvas_spot7">
-                      </div>
-                      <div class="3u" id="canvas_spot8">
-                      </div>
-                      <div class="3u" id="canvas_spot9">
-                      </div>
-                      <div class="3u">
-                        <div id="data_spot"></div>
-                        <div id="gif_spot"></div>
-                        <img id="image">
-                      </div>
-                    </div>
-                  </section>
+                  </div>
+                
+                <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div><div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
             </div>
           </div>
-
+        </div>
         
-
-      </div>
 
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
-      <script src="../assets/js/gifjs/b64.js"></script>
-      <script src="../assets/js/gifjs/LZWEncoder.js"></script>
-      <script src="../assets/js/gifjs/NeuQuant.js"></script>
-      <script src="../assets/js/gifjs/GIFEncoder.js"></script>
-
-      <script src="../charts/pitch-chart.js"></script>
-      <script src="../mlb/pitch-charts.js"></script>
+      <script type="text/javascript" src="../assets/js/nouislider.min.js">   </script>
+      <script type="text/javascript" src="../birthplaces/mlbdata.js">   </script>
+      <script type="text/javascript" src="../birthplaces/createdata.js">   </script>
+      <script type="text/javascript" src="../birthplaces/MapConfig.js"> </script>
+      <script type="text/javascript" src="../birthplaces/Map.js">   </script>
 
 
 
