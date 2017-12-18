@@ -1,0 +1,31 @@
+.sudoku {
+    width: 654px;
+    height: 654px;
+    margin: 20px;
+    border: 3px solid #333;
+    padding: 0 0 0 0;
+}
+.big-square {
+    float: left;
+    width: 216px;
+    height: 216px;
+    background-color: #999;
+    font-size:50px;
+    color:black;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle; 
+    border: solid 3px;
+}
+.white {
+    float: left;
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
+    font-size:20px;
+    color:black;
+    text-align:center;
+    display: table-cell;
+    vertical-align:middle;
+    border: solid 1px;
+}

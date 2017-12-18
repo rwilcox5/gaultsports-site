@@ -146,16 +146,20 @@
       for ( var abbrev in g_map_stateMap )
       {
          var state = g_map_stateMap[abbrev]; 
-         var nameAndAbbrev = state.myPrettyName + "  (" + state.myAbbrev + ")";
 
-         state.setInfoBoxText(nameAndAbbrev);
-         state.addInfoBoxText(""); // add a blank line
-         state.addInfoBoxText("% of Max: "+(statepop[abbrev]*100./statepopmax).toFixed(2));
+         state.addInfoBoxText(state.myPrettyName+'  '+statept[abbrev].toString());
+         state.addInfoBoxText("");
          var topi;
          for (topi=0;topi<statetops[abbrev].length;topi++){
-            state.addInfoBoxText(statetops[abbrev][topi].name);
+            state.addInfoBoxText(statetops[abbrev][topi].name+' ('+statetops[abbrev][topi].value+')');
          }
-         state.myBaseRGB = [255,255-Math.log(statepop[abbrev]*255./statepopmax/40.+1)*255/Math.log(7.),255-Math.log(statepop[abbrev]*255./statepopmax/40.+1)*255/Math.log(7.)];
+         if (document.getElementById('scale').value=='log'){
+            state.myBaseRGB = [255,255-Math.log(statept[abbrev]*255./stateptmax/40.+1)*255/Math.log(7.),255-Math.log(statept[abbrev]*255./stateptmax/40.+1)*255/Math.log(7.)];
+         }
+         else{
+            state.myBaseRGB = [255,255-statept[abbrev]*255./stateptmax,255-statept[abbrev]*255./stateptmax];
+         }
+         state.myHighlightRGB = [240,240-Math.log(statept[abbrev]*255./stateptmax/40.+1)*240/Math.log(7.),240-Math.log(statept[abbrev]*255./stateptmax/40.+1)*240/Math.log(7.)];
 
       }
 

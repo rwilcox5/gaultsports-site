@@ -11,6 +11,8 @@ python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data A
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-bracket-base.html --output ncaab/custom-NCAAB-bracket.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/solitaire.css --base nhl/base/solitaire-base.html --output nhl/solitaire.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/chess.css --base mlb/base/chess-base.html --output mlb/chess.html
+python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/sudoku.css --base mlb/base/sudoku-base.html --output mlb/sudoku.html
+python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/magic-square.css --base mlb/base/magic-base.html --output mlb/magic.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --base mlb/base/simulator-base.html --output mlb/simulator.html
 python createhtml.py --title "Custom QB Ratings by TripleLog - Sports and Data Analysis" --style ../assets/css/nouislider.min.css --onload "map_main()" --base birthplaces/base/map-base.html --output birthplaces/map.html
 

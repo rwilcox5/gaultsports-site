@@ -9,26 +9,63 @@
 
                     </div>
                     <div class="row">
-                      <div class="3u">
-                          <input id="start_year_born" value="1920" type="text" onchange="updateYears(true);"/>
-                      </div>
-                      <div class="3u">
-                          <input id="end_year_born" value="2000" type="text" onchange="updateYears(true);"/>
-                      </div>
-                      <div class="3u">
-                          <input id="start_year" value="1950" type="text" onchange="updateYears(false);"/>
-                      </div>
-                      <div class="3u">
-                          <input id="end_year" value="1960" type="text" onchange="updateYears(false);"/>
+                      <div class="6u">
+                        <div class="row">
+                          <div class="12u">
+                            Numerator
+                          </div>
+                          <div class="6u">
+                              <input id="sport" value="MLB" type="text" onchange="updateYears(true);"/>
+                          </div>
+                          <div class="6u">
+                              <input id="stat" value="0" type="text" onchange="updateYears(true);"/>
+                          </div>
+                          <div class="6u">
+                              <input id="start_year_born" value="1920" type="text" onchange="updateYears(true);"/>
+                          </div>
+                          <div class="6u">
+                              <input id="end_year_born" value="2000" type="text" onchange="updateYears(true);"/>
+                          </div>
+                          <div class="12u">
+                              <div id="slider_born"></div>
+                          </div>
+                          <div class="6u">
+                              <input id="start_year" value="1950" type="text" onchange="updateYears(false);"/>
+                          </div>
+                          <div class="6u">
+                              <input id="end_year" value="1960" type="text" onchange="updateYears(false);"/>
+                          </div>
+                          <div class="12u">
+                              <div id="slider_play"></div>
+                          </div>
+                          <div id='calculus'>This is it!</div>
+                        </div>
+                        
+                        <div class="row">
+
+                        </div>
                       </div>
                       <div class="6u">
-                          <div id="slider_born"></div>
+                        <div class="row">
+                          <div class="12u">
+                            Denominator
+                          </div>
+                          <div class="12u">
+                              <input id="denominator" value="raw" type="text" onchange="updateYears(true)"/>
+                          </div>
+                          <div class="12u">
+                              <input id="scale" value="linear" type="text" onchange="updateYears(true)"/>
+                          </div>
+
+
+                        </div>
+                        
+                        <div class="row">
+
+                        </div>
                       </div>
-                      <div class="6u">
-                          <div id="slider_play"></div>
-                      </div>
-                      
                     </div>
+
                   </div>
                 
                 show-ad-right

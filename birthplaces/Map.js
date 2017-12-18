@@ -339,7 +339,7 @@ function map_State(abbrev, capsName, prettyName)
    this.myInfoBoxTextRGB   = g_map_infoBoxTextRGB;
 
    this.myInfoBoxText = new Array();
-   this.myInfoBoxTextHeight = 10;      /* change this if you change the font*/
+   this.myInfoBoxTextHeight = 11;      /* change this if you change the font*/
 
 }
 
