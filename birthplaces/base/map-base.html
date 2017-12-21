@@ -56,6 +56,12 @@
                           <div class="12u">
                               <input id="scale" value="linear" type="text" onchange="updateYears(true)"/>
                           </div>
+                          <div class="12u">
+                              <input id="scale" value="linear" type="text" onchange="createGIF();"/>
+                          </div>
+                          <div class="12u">
+                              <img id="image">
+                          </div>
 
 
                         </div>
@@ -79,10 +85,16 @@
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
+      <script src="../assets/js/gifjs/b64.js"></script>
+      <script src="../assets/js/gifjs/LZWEncoder.js"></script>
+      <script src="../assets/js/gifjs/NeuQuant.js"></script>
+      <script src="../assets/js/gifjs/GIFEncoder.js"></script>
       <script type="text/javascript" src="../assets/js/nouislider.min.js">   </script>
       <script type="text/javascript" src="../birthplaces/mlbdata.js">   </script>
       <script type="text/javascript" src="../birthplaces/createdata.js">   </script>
       <script type="text/javascript" src="../birthplaces/MapConfig.js"> </script>
       <script type="text/javascript" src="../birthplaces/Map.js">   </script>
+
+
 
 

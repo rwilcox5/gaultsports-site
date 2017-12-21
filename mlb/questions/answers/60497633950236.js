@@ -1,0 +1,3 @@
+player_array = [{'nickname':'Senators','teamname':'Washington Senators','war':0,'ops':0.597,'homers':1,'triples':19,'doubles':12,'singles':108,'hits':140,'runs':63,'at-bats':581,'games':152,'rbi':33,'sb':17,'walks':15,'strikeouts':0,'hbp':4,'average':0.241,'onbase':0.265,'slugging':0.332,'year':1904,'league':'AL','division':''},{'nickname':'Senators','teamname':'Washington Senators','war':0,'ops':0.512,'homers':1,'triples':4,'doubles':16,'singles':103,'hits':124,'runs':67,'at-bats':576,'games':151,'rbi':43,'sb':23,'walks':25,'strikeouts':0,'hbp':2,'average':0.215,'onbase':0.25,'slugging':0.262,'year':1905,'league':'AL','division':''}];
+player_demo = {'bats':'R','throws':'R','birthState':'PA','birthCountry':'USA','inducted':-1,'birthYear':1883};
+allstar_array = [];

@@ -1,0 +1,3 @@
+player_array = [{'nickname':'Cardinals','teamname':'St. Louis Cardinals','war':0,'ops':0.652,'homers':1,'triples':7,'doubles':16,'singles':132,'hits':156,'runs':66,'at-bats':595,'games':153,'rbi':34,'sb':20,'walks':56,'strikeouts':0,'hbp':8,'average':0.262,'onbase':0.334,'slugging':0.318,'year':1906,'league':'NL','division':''},{'nickname':'Cardinals','teamname':'St. Louis Cardinals','war':0,'ops':0.531,'homers':0,'triples':2,'doubles':8,'singles':62,'hits':72,'runs':20,'at-bats':324,'games':87,'rbi':21,'sb':7,'walks':21,'strikeouts':0,'hbp':1,'average':0.222,'onbase':0.272,'slugging':0.259,'year':1907,'league':'NL','division':''}];
+player_demo = {'bats':'L','throws':'R','birthState':'NE','birthCountry':'USA','inducted':-1,'birthYear':1874};
+allstar_array = [];

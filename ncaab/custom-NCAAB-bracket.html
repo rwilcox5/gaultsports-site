@@ -37,9 +37,9 @@
                           <div class="dropdown-content" id="mlbDropdown">
                             <a href="../mlb/pitch-charts.html">Pitch Charts</a>
                             <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
-                            <a href="../mlb/questions.html">20 Questions<sup>&beta;</sup></a>
+                            <a href="../mlb/questions/questions.html">20 Questions<sup>&beta;</sup></a>
                             <a href="../mlb/simulator.html">Simulator<sup>&beta;</sup></a>
-                            <a href="../mlb/chess.html">Chess<sup>&beta;</sup></a>
+                            <a href="../mlb/chess.html">Games<sup>&beta;</sup></a>
                             <a href="../mlb/charts.html">Charts</a>
                           </div>
                         </li>
@@ -65,8 +65,8 @@
                             <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
                             <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
                             <a href="../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
-                            <a href="../ncaab/custom-NCAAB-rpi.html">BYOBracketologist<sup>&beta;</sup></a>
-                            <a href="../ncaab/custom-NCAAB-rpi.html">DAB</a>
+                            <a href="../ncaab/custom-NCAAB-bracket.html">BYOBracketologist<sup>&beta;</sup></a>
+                            <a href="../ncaab/dab.html">DAB</a>
                             <a href="../olympics/map.html">Olympic Map</a>
                             <a href="../ncaaf/map.html">Recruiting Map</a>
                             <a href="../ncaab/ranked-choice.html">Ranked Choice</a>
@@ -107,45 +107,58 @@
                 </header><!-- Banner -->
                 <section id="banner">
                   <div class="row">
-                    <div class="6u 12u$(medium)">
-                      <header>
-                        <h1>Custom QB Ratings</h1>
-                        <p>You decide who the best quarterback is</p>
-                      </header>
-                      <p>Do you feel like passer ratings are arbitrary?</p>
-                      <p>What if you were the arbiter? Decide which characteristics to weight and find the real elite quarterbacks.</p>
-                      <p>Quarterback statistics from every game in NFL history are loaded in and ready for your analysis. Try to come up with a way to make your favorite quarterback the greatest. Or use boring default ratings to identify the best weeks, seasons, and careers of all-time.</p>
-
-                    </div>
-                    <div class="6u 12u$(medium)">
+                    <div class="12u">
                       <div class="row">
-                        <div class="3u">
-                          <input id="wRec" value=".25" type="text"></input>
+                        <div class="2u">
+                          Import CSV Ranking:
                         </div>
-                        <div class="3u">
-                          <input id="wOpp" value=".50" type="text"></input>
-                        </div>
-                        <div class="3u">
-                          <input id="wOppOpp" value=".25" type="text"></input>
-                        </div>
-                        <div class="3u">
-                          <input id="hAdv" value=".4" type="text"></input>
+                        <div class="10u">
+                          <input id="teamRanking" placeholder="Import Ranking" type="text"></input>
                         </div>
                       </div>
                       <div class="row">
-                        <div class="6u">
+                        <div class="2u">
+                          Use RPI:
+                        </div>
+                        <div class="2u">
+                          <input id="wRec" value=".25" type="text"></input>
+                        </div>
+                        <div class="2u">
+                          <input id="wOpp" value=".50" type="text"></input>
+                        </div>
+                        <div class="2u">
+                          <input id="wOppOpp" value=".25" type="text"></input>
+                        </div>
+                        <div class="2u">
+                          <input id="hAdv" value=".4" type="text"></input>
+                        </div>
+                        <div class="2u">
                           <input id="nRows" value="10" type="text"></input>
                         </div>
-                        <div class="6u">
+                        
+                      </div>
+                      <div class="row">
+                        
+                        <div class="2u">
+                          <button class="button-primary" onclick="runRating(true);">Generate</button>
+                        </div>
+                        <div class="2u">
                           <select id="outputType">
                             <option value="Table">Table</option>
                             <option value="HTML">HTML</option>
                             <option value="Markdown">Markdown</option>
                           </select>
                         </div>
+                        <div class="6u">
+                          <ol id="rankingList">
+
+                          </ol>
+                        </div>
+                        <div class="2u">
+                          <button class="button-primary" onclick="editRanking();">Edit Ranking</button>
+                          </ul>
+                        </div>
                       </div>
-                      <button class="button-primary" onclick="runRating(true);">Generate</button>
-                      <button class="button-primary" onclick="runRating(false);">Generate</button>
                       <table id="rpiTable">
                       </table>
                       <div id="markdown_spot"><img class="xshide sshow" src="../assets/img/728x90.jpg" width="336" height="280"/><img class="shide xlshow" src="../assets/img/728x90.jpg" width="468" height="60"/><img class="xlhide" src="../assets/img/728x90.jpg" width="728" height="90"/></div>
@@ -168,6 +181,7 @@
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
+      <script src="../assets/js/sortable.min.js"></script>
       <script src="../ncaab/custom-NCAAB-bracket.js"></script>
   <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../privacy.html">Privacy Policy</a>&nbsp;<a href="../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
   </body>

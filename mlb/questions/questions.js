@@ -81,9 +81,18 @@ function setQuestion(e){
 				for (sdi=0;sdi<demo_data.length;sdi++){console.log(demo_data[sdi]);}
 				for (sdi=0;sdi<allstar_data.length;sdi++){console.log(allstar_data[sdi]);}
 				answers.rows[0].cells[1].innerHTML = "No";
-				var team_range = [];
+				var team_range = []; var league_range = []; var division_range = [];
 				if (team_data.length>0){
-					for (i=0;i<team_data.length;i++){if (team_data[i] != 'and' && team_data[i] != 'or'){team_range.push(team_data[i]);}}
+					for (i=0;i<team_data.length;i++){
+						if (Array.isArray(team_data[i])){
+							if (team_data[i][0]=='nl' || team_data[i][0]=='al'){league_range.push(team_data[i][0]);}
+							else{division_range.push(team_data[i][0]);}
+							
+						}
+						else if (team_data[i] != 'and' && team_data[i] != 'or'){
+							team_range.push(team_data[i]);
+						}
+					}
 				}
 				var need_allstars = 0; var have_allstars = 0;
 				if (allstar_data.length>0){need_allstars = allstar_data[0];}
@@ -121,6 +130,17 @@ function setQuestion(e){
 								goodteam = false;
 								for (i=0;i<team_range.length;i++){if (player_array[ii]['nickname'].toLowerCase()==team_range[i]){goodteam = true;}}
 							}
+							console.log(goodteam, league_range, division_range);
+							if (goodteam && league_range.length>0){
+								goodteam = false;
+								for (i=0;i<league_range.length;i++){if (player_array[ii]['league'].toLowerCase()==league_range[i]){goodteam = true;}}
+							}
+							console.log(goodteam);
+							if (goodteam && division_range.length>0){
+								goodteam = false;
+								for (i=0;i<division_range.length;i++){if (player_array[ii]['division'].toLowerCase()==division_range[i]){goodteam = true;}}
+							}
+							console.log(goodteam);
 							if (goodteam){
 								var is_allstar = true;
 								if (allstar_data.length>0){is_allstar = false;}
@@ -353,7 +373,22 @@ function updateTeam(split_q,ii,team_data){
 			else{team_data.push(split_q[ii]);}
 		}
 	}
+	if (split_q[ii]=='east'){
+		team_data.push(['e']);
+	}
+	if (split_q[ii]=='west'){
+		team_data.push(['w']);
+	}
+	if (split_q[ii]=='central'){
+		team_data.push(['c']);
+	}
 
+	if (split_q[ii]=='al'){
+		team_data.push(['al']);
+	}
+	if (split_q[ii]=='nl'){
+		team_data.push(['nl']);
+	}
 	return team_data;
 }
 

@@ -1,0 +1,49 @@
+                    show-ad-left
+                      
+                          <div class="row">
+                            <div class="2u">
+                                <button class="button-primary" onclick="createQuestions();">Create Game</button>
+                            </div>
+
+                          </div> 
+                          <div class="row">
+                            <div class="12u">
+                                <p>Test your baseball knowledge by creating a leaderboard quiz. Choose from dozens of statistics for pitchers or hitters and choose only the years you care about. Challenge yourself or send the quiz to a friend.</p>
+                                <p>Earn points for correctly knowing the answer, but lose points for incorrect guesses. Hints such as team and year information cost you points as well. Have some fun and good luck!</p>
+                                Popular quizzes: <br />
+                                <a href="../quizzes/most-wins-season-since-2000.html">What pitchers have the most wins in one season since 2000?</a> <br />
+                                Data Sources: <br />
+                                Raw data such as wins, ERA, etc. comes from the awesome, free <a href="">Lahman database.</a><br />
+                                Sabermetric data such as WAR, ERA+, etc. comes from the wonderful <a href="">Baseball Reference.</a> Check out how they compute WAR for more information.<br />
+                                If you come across any errors in the data please let me know.
+
+                            </div>
+                          </div> 
+                      </div>
+                      show-ad-right
+                      
+                    </section>
+
+                    </div>
+
+
+            </div>
+          </div>
+
+        
+
+      </div>
+
+    <!-- Scripts -->
+
+      <script src="../assets/js/main.js"></script>
+      <script src="../mlb/questions/players/player_list.js"></script>
+      <script>function createQuestions(){
+        var x = Math.trunc(Math.random()*player_ids.length);
+        var player_id = player_ids[x];
+  window.location = 'questions/questions.html?pid='+player_id.toString();
+}
+
+</script>
+
+

@@ -38,9 +38,9 @@
                           <div class="dropdown-content" id="mlbDropdown">
                             <a href="../mlb/pitch-charts.html">Pitch Charts</a>
                             <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
-                            <a href="../mlb/questions.html">20 Questions<sup>&beta;</sup></a>
+                            <a href="../mlb/questions/questions.html">20 Questions<sup>&beta;</sup></a>
                             <a href="../mlb/simulator.html">Simulator<sup>&beta;</sup></a>
-                            <a href="../mlb/chess.html">Chess<sup>&beta;</sup></a>
+                            <a href="../mlb/chess.html">Games<sup>&beta;</sup></a>
                             <a href="../mlb/charts.html">Charts</a>
                           </div>
                         </li>
@@ -66,8 +66,8 @@
                             <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
                             <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
                             <a href="../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
-                            <a href="../ncaab/custom-NCAAB-rpi.html">BYOBracketologist<sup>&beta;</sup></a>
-                            <a href="../ncaab/custom-NCAAB-rpi.html">DAB</a>
+                            <a href="../ncaab/custom-NCAAB-bracket.html">BYOBracketologist<sup>&beta;</sup></a>
+                            <a href="../ncaab/dab.html">DAB</a>
                             <a href="../olympics/map.html">Olympic Map</a>
                             <a href="../ncaaf/map.html">Recruiting Map</a>
                             <a href="../ncaab/ranked-choice.html">Ranked Choice</a>
@@ -163,6 +163,12 @@
                           <div class="12u">
                               <input id="scale" value="linear" type="text" onchange="updateYears(true)"/>
                           </div>
+                          <div class="12u">
+                              <input id="scale" value="linear" type="text" onchange="createGIF();"/>
+                          </div>
+                          <div class="12u">
+                              <img id="image">
+                          </div>
 
 
                         </div>
@@ -186,11 +192,17 @@
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
+      <script src="../assets/js/gifjs/b64.js"></script>
+      <script src="../assets/js/gifjs/LZWEncoder.js"></script>
+      <script src="../assets/js/gifjs/NeuQuant.js"></script>
+      <script src="../assets/js/gifjs/GIFEncoder.js"></script>
       <script type="text/javascript" src="../assets/js/nouislider.min.js">   </script>
       <script type="text/javascript" src="../birthplaces/mlbdata.js">   </script>
       <script type="text/javascript" src="../birthplaces/createdata.js">   </script>
       <script type="text/javascript" src="../birthplaces/MapConfig.js"> </script>
       <script type="text/javascript" src="../birthplaces/Map.js">   </script>
+
+
 
 
 

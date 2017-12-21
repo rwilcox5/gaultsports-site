@@ -49,7 +49,32 @@ years_play.noUiSlider.on('update', function( values, handle ) {
 	}
 });
 
-function updateYears(born){
+function createGIF(){
+	var encoder = new GIFEncoder();
+	encoder.setRepeat(1);
+	encoder.setDelay(500);
+	encoder.start();
+
+
+  	var i = 0; var syi; var eyi;
+
+  	for (i=0;i<40;i++){
+	  	syi  = 1930+i;
+		eyi = 1935+i;
+		updateYears(false,true,syi,eyi);
+		g_map_context.fillStyle = "rgb(255,255,255)";
+		g_map_context.fillRect(0,0,100,60);
+		g_map_context.font="30px Verdana";
+		g_map_context.fillStyle = "rgb(55,55,55)";
+		g_map_context.fillText(syi.toString(),0,30);
+	  	encoder.addFrame(g_map_context);
+  	}
+	encoder.finish();
+  	document.getElementById('image').src = 'data:image/gif;base64,'+encode64(encoder.stream().getData());
+  	console.log('sd');
+}
+
+function updateYears(born,noloop=false,syi=0,eyi=0){
 	var sport_name = document.getElementById('sport').value;
 	var sport_id = -1;
 	var stat_id = parseInt(document.getElementById('stat').value);
@@ -73,6 +98,7 @@ function updateYears(born){
 			
 		var start_year = parseInt(document.getElementById('start_year').value);
 		var end_year = parseInt(document.getElementById('end_year').value);
+		if (noloop){ start_year = syi; end_year = eyi;}
 		var i;
 
 		for ( var abbrev in statepops ){
@@ -247,5 +273,5 @@ function updateYears(born){
 		}
 	}
 	stateptmax=maxpop;
-	map_startRenderLoop();
+	map_startRenderLoop(noloop);
 }

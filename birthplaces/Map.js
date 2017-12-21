@@ -59,7 +59,7 @@ function map_main()
    g_map_context.fillStyle = g_map_backgroundColor;
    g_map_context.fillRect(0,0,g_map_canvas.width,g_map_canvas.height);
    updateYears(true);
-   map_startRenderLoop();
+   map_startRenderLoop(false);
 
    g_map_canvas.addEventListener('mousemove', map_mousemove, false);
    g_map_canvas.addEventListener('mousedown', map_mousedown, false);
@@ -178,12 +178,16 @@ function map_initCanvas()
    return true;
 }
 
-function map_startRenderLoop()
+function map_startRenderLoop(noloop)
 {
    map_createStateData();
    map_userSetup();
-   
+   if (!noloop){
    g_map_renderInterval = setInterval(map_renderLoop, 10);
+   }
+   else{
+    map_renderLoop();
+   }
 }
 
 

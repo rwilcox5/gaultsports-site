@@ -1,0 +1,3 @@
+player_array = [{'nickname':'Pirates','teamname':'Pittsburgh Pirates','war':2.42,'ops':0.68,'homers':3,'triples':12,'doubles':21,'singles':106,'hits':142,'runs':82,'at-bats':556,'games':154,'rbi':83,'sb':15,'walks':53,'strikeouts':0,'hbp':6,'average':0.255,'onbase':0.327,'slugging':0.353,'year':1906,'league':'NL','division':''},{'nickname':'Pirates','teamname':'Pittsburgh Pirates','war':0.32,'ops':0.626,'homers':0,'triples':8,'doubles':10,'singles':80,'hits':98,'runs':29,'at-bats':381,'games':105,'rbi':47,'sb':11,'walks':23,'strikeouts':0,'hbp':1,'average':0.257,'onbase':0.301,'slugging':0.325,'year':1907,'league':'NL','division':''}];
+player_demo = {'bats':'R','throws':'R','birthState':'CA','birthCountry':'USA','inducted':-1,'birthYear':1884};
+allstar_array = [];
