@@ -6,7 +6,7 @@
 -->
 <html>
   <head>
-    <title>Custom QB Ratings by TripleLog - Sports and Data Analysis</title>
+    <title>Baseball Sudoku by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
@@ -40,7 +40,7 @@
                             <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
                             <a href="../mlb/questions/questions.html">20 Questions<sup>&beta;</sup></a>
                             <a href="../mlb/simulator.html">Simulator<sup>&beta;</sup></a>
-                            <a href="../mlb/chess.html">Games<sup>&beta;</sup></a>
+                            <a href="../mlb/games.html">Fun and Games<sup>&beta;</sup></a>
                             <a href="../mlb/charts.html">Charts</a>
                           </div>
                         </li>
@@ -107,8 +107,11 @@
                   </div>
                 </header>
                   <div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">
-                    
                     <div class="row">
+                      <h1>MLB Sudoku</h1>
+                    </div>
+                    <div class="row">
+
                       <div class="sudoku">
                         <!-- 1st -->
                         <div class="big-square">
@@ -213,30 +216,89 @@
                       </div>
                     </div>
                     <div class="row">
-                      <button class="button-primary" onclick="chgTeam('ATL');">ATL</button>
-                      <button class="button-primary" onclick="chgTeam('BAL');">BAL</button>
-                      <button class="button-primary" onclick="chgTeam('CHC');">CHC</button>
-                      <button class="button-primary" onclick="chgTeam('DET');">DET</button>
-                      <button class="button-primary" onclick="chgTeam('HOU');">HOU</button>
-                      <button class="button-primary" onclick="chgTeam('KCR');">KCR</button>
-                      <button class="button-primary" onclick="chgTeam('LAD');">LAD</button>
-                      <button class="button-primary" onclick="chgTeam('MIL');">MIL</button>
-                      <button class="button-primary" onclick="chgTeam('NYY');">NYY</button>
+                      <div class="6u">
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('ATL');">ATL</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('BAL');">BAL</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('CHC');">CHC</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('DET');">DET</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('HOU');">HOU</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('KCR');">KCR</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('LAD');">LAD</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('MIL');">MIL</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgTeam('NYY');">NYY</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <button class="button special" onclick="hideInfo('Teams');">Hide Teams</button>
+                        </div>
+                      </div>
+                      <div class="6u">
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('C');">C</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('1B');">1B</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('2B');">2B</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('SS');">SS</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('3B');">3B</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('LF');">LF</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('CF');">CF</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('RF');">RF</button>
+                          </div>
+                          <div class="4u">
+                            <button class="button default" onclick="chgPos('P');">P</button>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <button class="button special" onclick="hideInfo('Pos');">Hide Positions</button>
+                        </div>
+                      </div>
                     </div>
                     <div class="row">
-                      <button class="button-primary" onclick="chgPos('C');">C</button>
-                      <button class="button-primary" onclick="chgPos('1B');">1B</button>
-                      <button class="button-primary" onclick="chgPos('2B');">2B</button>
-                      <button class="button-primary" onclick="chgPos('SS');">SS</button>
-                      <button class="button-primary" onclick="chgPos('3B');">3B</button>
-                      <button class="button-primary" onclick="chgPos('LF');">LF</button>
-                      <button class="button-primary" onclick="chgPos('CF');">CF</button>
-                      <button class="button-primary" onclick="chgPos('RF');">RF</button>
-                      <button class="button-primary" onclick="chgPos('P');">P</button>
-                    </div>
-                    <div class="row">
-                      <button class="button-primary" onclick="hideInfo('Pos');">Hide Positions</button>
-                      <button class="button-primary" onclick="hideInfo('Teams');">Hide Teams</button>
+                      <h3>How to Play</h3>
+                      <p>MLB Sudoku has the same rules as regular sudoku except each cell has two pieces of information. Your goal is to arrange the lineups so that no row, column, or 3x3 block has two players with the same position or team.</p>
+                      <p>You can try to fill in all of the positions without worrying about the teams. And try to fill in all of the teams without worrying about the positions. In these cases you are simply completing two sudokus in the same puzzle and can use the exact strategies you normally use.</p>
+                      <p>However, there is one extra source of strategy. Each position-team pair is used exactly once so if you get stuck then you can use the information simultaneously. If you know a cell is a catcher and you know what team the other 8 catchers play for then you can deduce the team of the final catcher. There are many more avenues for deducing the answer so put on your creative and logical hats and have some fun!</p>
+                      <p>Puzzles range from easy puzzles that any sudokuer can solve to difficult puzzles that will take some time to crack.</p>
                     </div>
                     
 

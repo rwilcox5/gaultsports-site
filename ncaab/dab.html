@@ -6,14 +6,14 @@
 -->
 <html>
   <head>
-    <title>Custom QB Ratings by TripleLog - Sports and Data Analysis</title>
+    <title>DAB Bubble Analysis by TripleLog - Sports and Data Analysis</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="../assets/css/main.css" />
     <link rel="icon" href="../assets/img/logo.png">
 
   </head>
-  <body onload="">
+  <body onload="runRating(0);">
 
     <!-- Wrapper -->
       <div id="wrapper">
@@ -39,7 +39,7 @@
                             <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
                             <a href="../mlb/questions/questions.html">20 Questions<sup>&beta;</sup></a>
                             <a href="../mlb/simulator.html">Simulator<sup>&beta;</sup></a>
-                            <a href="../mlb/chess.html">Games<sup>&beta;</sup></a>
+                            <a href="../mlb/games.html">Fun and Games<sup>&beta;</sup></a>
                             <a href="../mlb/charts.html">Charts</a>
                           </div>
                         </li>
@@ -107,48 +107,55 @@
                 </header><!-- Banner -->
                 <section id="banner">
                   <div class="row">
-                    <div class="6u">
-                    <header>
-                      <h1>Best Bubble Teams</h1>
-                    </header>
-                      <h2>Week 10 Update</h2>
-                    <p></p>
-
-                      <h2>How it Works</h2>
-
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p>  </p>
-
-                    </div>
+                    
                       
-                    <div class="6u">
+                    <div class="6u 12u$(medium)">
 
+                      <header>
+                        <h1>Bubble Teams</h1>
+                      </header>
+                      <table id="dabTable">
+                      </table>
                       <div class="row">
                         
-                        <div class="6u">
-                          <button class="button-primary" onclick="runRating(0);">View Bubble Teams</button>
+                        <div class="3u 6u$(medium)">
+                          <button class="button-primary" onclick="runRating(0);">Bubble</button>
                         </div>
-                        <div class="6u">
-                          <button class="button-primary" onclick="runRating(1);">View #1 Seeds</button>
+                        <div class="3u 6u$(medium)">
+                          <button class="button-primary" onclick="runRating(1);">#1 Seed</button>
                         </div>
-                        <div class="6u">
-                          <button class="button-primary" onclick="runRating(4);">View Top 4 Seeds</button>
+                        <div class="3u 6u$(medium)">
+                          <button class="button-primary" onclick="runRating(4);">Top 4</button>
                         </div>
-                        <div class="6u">
-                          <button class="button-primary" onclick="runRating(8);">View Top 8 Seeds</button>
+                        <div class="3u 6u$(medium)">
+                          <button class="button-primary" onclick="runRating(8);">Top 8</button>
                         </div>
 
                       </div>
-                      <table id="rpiTable">
-                      </table>
-                      <div id="markdown_spot"><img class="xshide sshow" src="../assets/img/728x90.jpg" width="336" height="280"/><img class="shide xlshow" src="../assets/img/728x90.jpg" width="468" height="60"/><img class="xlhide" src="../assets/img/728x90.jpg" width="728" height="90"/></div>
+                      <div id="markdown_spot"><img class="mhide xlshow" src="http://via.placeholder.com/468x60" width="468" height="60"/><img class="xlhide" src="http://via.placeholder.com/728x90" width="728" height="90"/></div>
+
+                    </div>
+
+                  
+
+                    <div class="6u 12u$(medium)">
+                      
+                        <h2>Week 8 Update</h2>
+                      <p></p>
+
+                        <h2>How it Works</h2>
+
+                      <p>Every team should have an equal opportunity to prove themselves. A team that plays an easy schedule should not be dismissed but simply forced to win games by more impressive margins. And a team that regularly loses to top competition should be rewarded for keeping games close.</p>
+                      <p>DAB works by determining how a typical bubble team would perform against each team's schedule. This expected performance is compared to the actual performance and if the team is usually doing better than an expected bubble team they should be in, and if they usually underperform then they should be out.</p>
+                      <p></p>
+                      <p></p>
+                      <p>  </p>
 
                     </div>
 
                   </div>
                 </section>
+
 
 
               
@@ -159,10 +166,12 @@
         
 
       </div>
+      
 
     <!-- Scripts -->
 
       <script src="../assets/js/main.js"></script>
+
       <script src="../ncaab/dab.js"></script>
   <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../privacy.html">Privacy Policy</a>&nbsp;<a href="../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
   </body>

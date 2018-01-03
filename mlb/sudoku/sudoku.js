@@ -4,13 +4,13 @@ var teams = ['ATL','BAL','CHC','DET','HOU','KCR','LAD','MIL','NYY'];
 var hideTeams = false; var hidePos = false;
 function updateCell([block,spot],piece){
 	if (hideTeams){
-		document.getElementById('cell'+block.toString()+spot.toString()).innerHTML=piece[0]+'<br> ';
+		document.getElementById('cell'+block.toString()+spot.toString()).innerHTML='<font color="red">'+piece[0]+'</font><br> ';
 	}
 	else if (hidePos){
 		document.getElementById('cell'+block.toString()+spot.toString()).innerHTML=' <br>'+piece[1];
 	}
 	else{
-		document.getElementById('cell'+block.toString()+spot.toString()).innerHTML=piece[0]+'<br>'+piece[1];
+		document.getElementById('cell'+block.toString()+spot.toString()).innerHTML='<font color="red">'+piece[0]+'</font><br>'+piece[1];
 	}
 }
 

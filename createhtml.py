@@ -20,6 +20,8 @@ basefile = args.base
 f = open('base/header.html','r')
 filedata = f.read()
 f.close()
+if outputfile.find('/')==-1:
+	filedata = filedata.replace('../','')
 newdata = filedata.replace("<title></title>","<title>"+title+"</title>")
 if style is not None:
 	for i in style:
@@ -35,7 +37,7 @@ if onload is not None:
 f = open(basefile,'r')
 filedata = f.read()
 f.close()
-newdata += filedata.replace('show-ad-top','<div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="728" height="90" class="mhide topbanner" /><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div>').replace('show-ad-left','<div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">').replace('show-ad-right','<div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div><div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div>')
+newdata += filedata.replace('||half-ad||','<img class="mhide xlshow" src="http://via.placeholder.com/468x60" width="468" height="60"/><img class="xlhide" src="http://via.placeholder.com/728x90" width="728" height="90"/>').replace('show-ad-top','<div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="728" height="90" class="mhide topbanner" /><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div>').replace('show-ad-left','<div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">').replace('show-ad-right','<div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div><div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div>')
 
 f = open('base/footer.html','r')
 filedata = f.read()
