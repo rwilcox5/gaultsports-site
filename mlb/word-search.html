@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+  Editorial by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Baseball Chess by TripleLog - Sports and Data Analysis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="icon" href="../assets/img/logo.png">
+
+  <link rel="stylesheet" href="../assets/css/word-search.css" />
+</head>
+  <body onload="">
+
+    <!-- Wrapper -->
+      <div id="wrapper">
+
+        <!-- Main -->
+          <div id="main">
+            <div class="inner" id='inner-div'>
+
+              <!-- Header -->
+                <header id="header">
+                  <div class="row">
+                    <div class="4u 6u$(medium) 8u$(small)">
+                      <a href="../index.html" class="logo"><img src="../assets/img/logo.png" width="40px"><strong>TripleLog</strong> Sports and Data</a>
+                    </div>
+                    <div class="8u mhide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmlb" onclick="myFunction('mlbDropdown');">MLB
+                            <img src="../assets/img/down.png" width="13px" class="dropmlb drop" >
+                          </button>
+                          <div class="dropdown-content" id="mlbDropdown">
+                            <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                            <a href="../mlb/create-mlb-quiz.html">Leader Quizzes</a>
+                            <a href="../mlb/questions/questions.html">20 Questions<sup>&beta;</sup></a>
+                            <a href="../mlb/simulator.html">Simulator<sup>&beta;</sup></a>
+                            <a href="../mlb/games.html">Fun and Games<sup>&beta;</sup></a>
+                            <a href="../mlb/charts.html">Charts</a>
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn droppro" onclick="myFunction('proDropdown');">Pro
+                            <img src="../assets/img/down.png" width="13px" class="droppro drop" >
+                          </button>
+                          <div class="dropdown-content" id="proDropdown">
+                            <a href="../nfl/custom-QB-rating.html">Custom QB Ratings</a>
+                            <a href="../nba/create-nba-quiz.html">NBA Quizzes</a>
+                            <a href="../nba/custom-QB-rating.html">NBA Pt. Spread</a>
+                            <a href="../nhl/solitaire.html">NHL Solitaire<sup>&beta;</sup></a>
+                            <a href="../birthplaces/maps.html">Birthplace Maps<sup>&beta;</sup></a>
+                            <a href="../pro/oiler.html">Oiler Challenges<sup>&beta;</sup></a>
+                            
+                          </div>
+                        </li>
+                        <li>
+                          <button class="dropbtn dropncaa" onclick="myFunction('ncaaDropdown');">Amateur
+                            <img src="../assets/img/down.png" width="13px" class="dropncaa drop" >
+                          </button>
+                          <div class="dropdown-content" id="ncaaDropdown">
+                            <a href="../ncaaf/recruiting.html">Team Recruiting Rankings</a>
+                            <a href="../ncaaf/ap-poll.html">Weighted AP Poll</a>
+                            <a href="../ncaab/custom-NCAAB-rpi.html">Custom RPI</a>
+                            <a href="../ncaab/custom-NCAAB-bracket.html">BYOBracketologist<sup>&beta;</sup></a>
+                            <a href="../ncaab/dab.html">DAB</a>
+                            <a href="../olympics/map.html">Olympic Map</a>
+                            <a href="../ncaaf/map.html">Recruiting Map</a>
+                            <a href="../ncaab/ranked-choice.html">Ranked Choice</a>
+                          </div>
+                        </li>
+
+                        <li><a href="#" class="social-icon"><img src="../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="6u mshow shide">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropmenu" onclick="myFunction('menuDropdown');">Menu
+                                <img src="../assets/img/down.png" width="13px" class="dropmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="menuDropdown">
+                                <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/twitter.png" width="25px"></a></li>
+                        <li><a href="#" class="social-icon"><img src="../assets/img/reddit.png" width="25px"></a></li>
+                      </ul>
+                    </div>
+                    <div class="4u sshow">
+                      <ul class="icons">
+                        <li>
+                          <button class="dropbtn dropfullmenu" onclick="myFunction('fullmenuDropdown');">Menu
+                                <img src="../assets/img/down.png" width="13px" class="dropfullmenu drop" >
+                              </button>
+                              <div class="dropdown-content" id="fullmenuDropdown">
+                                <a href="../mlb/pitch-charts.html">Pitch Charts</a>
+                              </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </header>
+                  <div width="100%" style="display:block;"><img src="../assets/img/728x90.jpg" width="468" height="60" class="mshowb xshide topbanner" /></div><section class="banner">                    <div class="row">                      <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div>                      <div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="6u 8u$(xlarge) 9u$(large) 12u$(medium)">
+                    
+                    <div class="row">
+                      <div class="wordsearch14" id='wordsearch'>
+                        
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="4u">
+                        <h3>MLB HR 2016:</h3>
+                        <div class="row" id="homeruns">
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <h3>MLB R 2016:</h3>
+                        <div class="row" id="runs">
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <h3>MLB RBI 2016:</h3>
+                        <div class="row" id="rbi">
+                        </div>
+                      </div>
+
+                      <div class="4u">
+                        <h3>MLB WAR 2016:</h3>
+                        <div class="row" id="war">
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <h3>MLB BB 2016:</h3>
+                        <div class="row" id="bb">
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <h3>MLB K 2016:</h3>
+                        <div class="row" id="so">
+                        </div>
+                      </div>
+
+                      <div class="4u">
+                        <h3>MLB SB 2016:</h3>
+                        <div class="row" id="sb">
+                        </div>
+                      </div>
+                      <div class="4u">
+                        <h3>MLB Hits 2016:</h3>
+                        <div class="row" id="hits">
+                        </div>
+                      </div>
+
+                      
+                    </div>
+                    
+
+
+                    
+                  </div>
+                
+                <div class="3u xlhide"><img src="../assets/img/160x600.jpg" width="300" height="600" /></div><div class="2u lhide xlshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div><div class="3u mhide lshow"><img src="../assets/img/160x600.jpg" width="160" height="600" /></div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+
+    <!-- Scripts -->
+
+      <script src="../assets/js/main.js"></script>
+      <script src="../assets/js/svg.js"></script>
+      <script src="../mlb/word-search/word-search.js"></script>
+
+
+
+
+
+  <div id="footer">&copy;2017 TripleLog&nbsp;<a href="../privacy.html">Privacy Policy</a>&nbsp;<a href="../terms.html">Terms of Use</a>&nbsp; Email: rwilcox@triplelog.com, Tweet: @triplelog</div>
+  </body>
+</html>

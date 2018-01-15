@@ -10,10 +10,12 @@ python createhtml.py --title "20 Questions to Test Your MLB Knowledge by TripleL
 python createhtml.py --title "Parlay Advantages by TripleLog - Sports and Data Analysis" --base nfl/future/nfl-parlays-base.html --output nfl/nfl-parlays.html
 python createhtml.py --title "Custom RPI by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-rpi-base.html --output ncaab/custom-NCAAB-rpi.html
 python createhtml.py --title "Bracket Predictor by TripleLog - Sports and Data Analysis" --base ncaab/base/custom-NCAAB-bracket-base.html --output ncaab/custom-NCAAB-bracket.html
+python createhtml.py --title "College Football Clicker by TripleLog - Sports and Data Analysis" --base ncaaf/base/clicker-base.html --output ncaaf/clicker.html
 python createhtml.py --title "DAB Bubble Analysis by TripleLog - Sports and Data Analysis" --onload "runRating(0)" --base ncaab/base/dab-base.html --output ncaab/dab.html
 python createhtml.py --title "NHL Solitaire by TripleLog - Sports and Data Analysis" --style ../assets/css/solitaire.css --base nhl/base/solitaire-base.html --output nhl/solitaire.html
 python createhtml.py --title "Baseball Fun and Games by TripleLog - Sports and Data Analysis" --base mlb/base/games-base.html --output mlb/games.html
 python createhtml.py --title "Baseball Chess by TripleLog - Sports and Data Analysis" --style ../assets/css/chess.css --base mlb/base/chess-base.html --output mlb/chess.html
+python createhtml.py --title "Baseball Chess by TripleLog - Sports and Data Analysis" --style ../assets/css/word-search.css --base mlb/base/word-search-base.html --output mlb/word-search.html
 python createhtml.py --title "Baseball Sudoku by TripleLog - Sports and Data Analysis" --style ../assets/css/sudoku.css --base mlb/base/sudoku-base.html --output mlb/sudoku.html
 python createhtml.py --title "MLB Magic Squares by TripleLog - Sports and Data Analysis" --style ../assets/css/magic-square.css --base mlb/base/magic-base.html --output mlb/magic.html
 python createhtml.py --title "Simple Lineup Simulator by TripleLog - Sports and Data Analysis" --base mlb/base/simulator-base.html --output mlb/simulator.html
